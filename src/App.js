@@ -1,15 +1,25 @@
 import React from 'react';
 import {data} from './data/Data';
+
+import {Route, Switch} from 'react-router-dom';
+import Home from './components/Home';
+import Areas from './components/Areas';
 import './App.css';
 
 class App extends React.Component {
-  
-  render() {
-    console.log(data);
+  render () {
     return (
-   <p>{data[0].area}</p>
-  );
-  }  
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route
+            path="/:areasID"
+            render={props => <Areas match={props.match}/>}
+          />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,22 +1,13 @@
 import React from 'react';
-import {fetchData} from './components/services/Data';
+import {data} from './Data/Data';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.getData();
-  }
-    getData(){
-      fetchData()
-        .then(data => {
-          console.log(data);
-        })
-      
-    }
+  
   render() {
+    console.log(data);
     return (
-   <p>hola</p>
+   <p>{data[0].area}</p>
   );
   }  
 }

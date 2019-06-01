@@ -1,0 +1,81 @@
+.card__container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  margin: 10px;
+  width: 400px;
+  height: 280px;
+  background-color: #fff;
+    &:hover {
+      box-shadow: (-4px 13px 31px 0 rgba(0, 0, 0, 0.4));
+      filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+  }
+}
+
+.block1{
+  display: flex;
+}
+
+.card__img {
+  height: 120px;
+  width: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 15px;
+
+}
+
+.block2{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 15px;
+  flex-direction: column;
+}
+
+.block2__name{
+  display: flex;
+}
+
+.card__name {
+  margin-right: 15px;
+  font-size: 28px;
+}
+
+.card__surname{
+  font-size: 28px;
+}
+
+.card__position{
+  font-size: 22px;
+  color: gray;
+}
+
+.block3{
+  text-align: left;
+  margin: 15px;
+  color: grey;
+}
+
+.card__email{
+  font-size: 16px;
+}
+
+.card__area{
+  font-size: 20px;
+  margin: 0%;
+}
+
+.card__link{
+  width: 90%;
+  text-align: right;
+  margin: 0 15px; 
+  color: #49A5E6;
+}
+
+
+
+
+

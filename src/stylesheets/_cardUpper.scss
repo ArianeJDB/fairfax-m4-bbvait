@@ -1,0 +1,77 @@
+.upper__container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  margin: 10px;
+  width: 450px;
+  height: 330px;
+  background-color: #fff;
+    &:hover {
+      box-shadow: (-4px 13px 31px 0 rgba(0, 0, 0, 0.4));
+      filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+  }
+}
+
+.upper-block1{
+  display: flex;
+}
+
+.upper__img {
+  height: 140px;
+  width: 140px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 25px;
+
+}
+
+.upper-block2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 15px;
+
+}
+
+.upper-block2__name{
+  display: flex;
+}
+
+.upper__name {
+  margin-right: 20px;
+}
+
+.upper__position{
+  font-size: 24px;
+  color: gray;
+}
+
+.upper-block3{
+  text-align: left;
+  margin:  15px 25px;
+  color: grey;
+}
+
+.upper__email{
+  font-size: 16px;
+}
+
+.upper__area{
+  font-size: 20px;
+  margin: 0%;
+}
+
+.upper__link{
+  width: 90%;
+  text-align: right;
+  margin: 0 15px; 
+  color: #49A5E6;
+}
+
+
+
+
+

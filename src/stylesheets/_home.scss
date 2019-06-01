@@ -1,0 +1,21 @@
+.lower__block {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-line {
+  width: 70%;
+  color: gainsboro;
+  padding-top: 30px;
+}

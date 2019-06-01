@@ -1,28 +1,29 @@
 import React from 'react';
-import Card from './Card';
+import CardLower from './CardLower';
 
 class Home extends React.Component {
   render () {
     return (
       <div className="box__container">
         <div className="upper__block">
-          <Card className="jefazo"/>
+          <CardLower className="card__level1"/>
         </div>
+        <hr className="horizontal-line"/>
         <ul className="lower__block">
           <li>
-            <Card />
+            <CardLower />
           </li>
           <li>
-            <Card />
+            <CardLower />
           </li>
           <li>
-            <Card />
+            <CardLower />
           </li>
           <li>
-            <Card />
+            <CardLower />
           </li>
           <li>
-            <Card />
+            <CardLower />
           </li>
         </ul>
       </div>

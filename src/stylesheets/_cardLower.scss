@@ -30,21 +30,37 @@
 .block2{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 15px;
+  flex-direction: column;
+}
+
+.block2__name{
+  display: flex;
 }
 
 .card__name {
   margin-right: 15px;
+  font-size: 28px;
+}
+
+.card__surname{
+  font-size: 28px;
+}
+
+.card__position{
+  font-size: 22px;
+  color: gray;
 }
 
 .block3{
   text-align: left;
   margin: 15px;
+  color: grey;
 }
 
 .card__email{
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .card__area{

@@ -29,25 +29,37 @@
 
 .upper-block2{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 15px;
+
+}
+
+.upper-block2__name{
+  display: flex;
 }
 
 .upper__name {
   margin-right: 20px;
 }
 
+.upper__position{
+  font-size: 24px;
+  color: gray;
+}
+
 .upper-block3{
   text-align: left;
   margin:  15px 25px;
+  color: grey;
 }
 
 .upper__email{
-  font-size: 20px;
+  font-size: 16px;
 }
 
-.uppe__area{
+.upper__area{
   font-size: 20px;
   margin: 0%;
 }

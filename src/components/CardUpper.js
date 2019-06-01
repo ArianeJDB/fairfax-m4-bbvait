@@ -9,8 +9,11 @@ class CardLower extends React.Component {
         <div className="upper-block1">
           <div className="upper__img" style={{backgroundImage: `url(${patri})`}}></div>
           <div className="upper-block2">
-            <h2 className="upper__name">Lorena</h2>
-            <h2 className="upper__surname">Benito</h2>
+            <div className="upper-block2__name">
+              <h2 className="upper__name">Lorena</h2>
+              <h2 className="upper__surname">Benito</h2>
+            </div>
+            <h2 className="upper__position">Director General</h2>
           </div>
 
         </div>

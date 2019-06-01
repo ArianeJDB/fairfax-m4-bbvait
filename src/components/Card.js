@@ -5,6 +5,7 @@ class Card extends React.Component {
   render () {
     return (
       <div className="card__container">
+
         <h2>Name and surname</h2>
         <h3>Job</h3>
         <h3>Area</h3>

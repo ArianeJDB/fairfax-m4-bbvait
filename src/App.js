@@ -1,10 +1,10 @@
 import React from 'react';
 import {data} from './data/Data';
-
 import {Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Areas from './components/Areas';
 import './App.css';
+import './styleSheet/App.scss';
 
 class App extends React.Component {
   render () {

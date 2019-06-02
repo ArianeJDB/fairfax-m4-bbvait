@@ -4,12 +4,14 @@
   border: 1px solid gainsboro;
   border-radius: 5px;
   margin: 10px;
-  width: 450px;
-  height: 330px;
+  width: 410px;
+  height: 290px;
+  letter-spacing: -1px;
   background-color: #fff;
     &:hover {
-      box-shadow: (-4px 13px 31px 0 rgba(0, 0, 0, 0.4));
-      filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+      box-shadow: (-2px 3px 10px 0 rgba(0, 0, 0, 0.1));
+      filter: drop-shadow(5px 5px 10px rgb(156, 154, 154));
+      transition: 0.5s;
   }
 }
 
@@ -41,7 +43,13 @@
 }
 
 .upper__name {
-  margin-right: 20px;
+  margin-right: 10px;
+  font-size: 32px;
+}
+
+.upper__surname {
+  margin: 0%;
+  font-size: 32px;
 }
 
 .upper__position{
@@ -67,8 +75,8 @@
 .upper__link{
   width: 90%;
   text-align: right;
-  margin: 0 15px; 
   color: #49A5E6;
+  margin: -25px 0; 
 }
 
 

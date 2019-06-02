@@ -1,3 +1,8 @@
+.box__container{
+  background-size: cover;
+  background-position: center;
+}
+
 .lower__block {
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20px;
+  height: 60px;
 }
 
 .header__title {
@@ -38,6 +43,9 @@
 }
 
 .logout{
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 30px;;
+  &:hover{
+    transform: translate(5px, 0px);
+  }
 }

@@ -2,10 +2,15 @@
 @import 'cardUpper';
 @import 'home';
 
+body {
+  margin: 0;
+}
 
 .App {
   font-family: 'Roboto';
   text-align: center;
   background-color: #f4f4f4;
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }

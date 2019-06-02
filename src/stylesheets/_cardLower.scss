@@ -3,13 +3,15 @@
   flex-direction: column;
   border: 1px solid gainsboro;
   border-radius: 5px;
-  margin: 10px;
-  width: 400px;
-  height: 280px;
+  margin: 20px;
+  width: 360px;
+  height: 270px;
+  letter-spacing: -1px;
   background-color: #fff;
     &:hover {
       box-shadow: (-2px 3px 10px 0 rgba(0, 0, 0, 0.1));
-      filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+      filter: drop-shadow(5px 5px 10px rgb(156, 154, 154));
+      transition: 0.5s;
   }
 }
 
@@ -40,7 +42,7 @@
 }
 
 .card__name {
-  margin-right: 15px;
+  margin-right: 10px;
   font-size: 28px;
 }
 
@@ -71,7 +73,7 @@
 .card__link{
   width: 90%;
   text-align: right;
-  margin: 0 15px; 
+  margin: 5 15px; 
   color: #49A5E6;
 }
 

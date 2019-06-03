@@ -20,7 +20,7 @@ class CardUpper extends React.Component {
         <div className="upper-block3">
           <div className="upper__details">
             <div className="upper__contact">
-              <h3 className="upper__email">xxxxxxxx@gmail.com</h3>
+              <a className="upper__email" href={`mailto:{xxxxxxx@gmail.com}`} target="_blank">xxxxxxx@gmail.com</a>
               <h3 className="card__phone">666666666</h3>
             </div>
             <h3 className="upper__area">Area</h3>

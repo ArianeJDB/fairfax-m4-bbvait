@@ -5,7 +5,7 @@
   border-radius: 5px;
   margin: 20px;
   width: 360px;
-  height: 270px;
+  height: 250px;
   letter-spacing: -1px;
   background-color: #fff;
     &:hover {
@@ -70,6 +70,7 @@
 
 .card__email{
   font-size: 16px;
+  color: grey;
 }
 
 .card__phone{
@@ -90,7 +91,7 @@
   width: 50%;
   align-self: flex-end;
   text-align: right;
-  margin: 65px 15px 10px 0;
+  margin: 45px 15px 10px 0;
   color: #49A5E6;
 }
 

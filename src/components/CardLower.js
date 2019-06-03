@@ -20,7 +20,7 @@ class CardLower extends React.Component {
         <div className="block3">
           <div className="card__details">
             <div className="card__contact">
-              <a className="card__email" href={`mailto:{xxxxxxx@gmail.com}`} target="_blank">xxxxxxx@gmail.com</a>
+              <a className="card__email" href={`mailto:{xxxxxxx@gmail.com}`} target="_blank" rel="noopener noreferrer">xxxxxxx@gmail.com</a>
               <h3 className="card__phone">666666666</h3>
             </div>
             <h3 className="card__area">Area</h3>

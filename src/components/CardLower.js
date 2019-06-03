@@ -23,6 +23,7 @@ class CardLower extends React.Component {
         <div className="block3">
           <div className="card__details">
             <h3 className="card__email">xxxxxxx@gmail.com</h3>
+            <h3 className="card__phone">666 666 666</h3>
             <h3 className="card__area">Area</h3>
           </div>
           <div className="card__link">

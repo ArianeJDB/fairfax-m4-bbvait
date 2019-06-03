@@ -19,6 +19,7 @@ class CardLower extends React.Component {
         </div>
         <div className="upper-block3">
           <h3 className="upper__email">xxxxxxxx@gmail.com</h3>
+          <h3 className="card__phone">666 666 666</h3>
           <h3 className="upper__area">Area</h3>
         </div>
         <div className="upper__link">

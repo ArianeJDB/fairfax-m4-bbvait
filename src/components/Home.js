@@ -13,7 +13,7 @@ class Home extends React.Component {
         </div>
         
         <div className="upper__block">
-          {this.props.chief === undefined ? 'loading' : this.props.chief
+          {this.props.chief
             .map(item => {
               return (
                 <div className="card__level1">
@@ -27,18 +27,13 @@ class Home extends React.Component {
         </div>
         <hr className="horizontal-line"/>
         <ul className="lower__block">
-          {this.props.executives === undefined ? 'loading' : this.props.executives
+          {this.props.executives
             .map(item => {
-              console.log('item', item);
               return (
                 <li>
                   <CardLower 
-                    first_name={item.first_name}
-                    last_name={item.last_name}
-                    email={item.email}
-                    extension={item.extension}
-                    phone={item.phone}
-                    area={item.area} />
+                  item={item}
+                  />
                 </li>
               )
             })}

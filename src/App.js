@@ -9,12 +9,19 @@ class App extends React.Component {
   constructor (props) {
     super (props);
     this.state = {
-      people: null,
+      chief: [],
+      executives: [],
+      managers: [],
+      projects: [],
+      staff: [],
+      isLoading: true,
     };
   }
+
   componentDidMount () {
     this.FetchAllData ();
   }
+
   FetchAllData () {
     fetchPeople ().then (people => {
       this.setState ({
@@ -23,16 +30,46 @@ class App extends React.Component {
         managers: [...people.managers],
         projects: [...people.projects],
         staff: [...people.staff],
+        isLoading: false,
       });
     });
   }
   render () {
+    const {
+      chief,
+      executives,
+      managers,
+      projects,
+      staff,
+      isLoading,
+    } = this.state;
+
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" render={() => <Home chief={this.state.chief} executives={this.state.executives} />} />
-          {/* <Route
-            path="/areas/:id" render={(props) => people ? <Areas match={props.match} executives={people.executives.find(area => area.id === props.params.id)}/> : 'loading...' } /> */}
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                chief={this.state.chief}
+                executives={this.state.executives}
+              />
+            )}
+          />
+          <Route
+            path="/areas/:id"
+            render={props => (
+              <Areas
+                match={props.match}
+                executives={executives}
+                managers={managers}
+              />
+            )}
+          />
         </Switch>
       </div>
     );

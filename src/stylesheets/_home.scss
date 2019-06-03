@@ -1,6 +1,7 @@
 .box__container{
   background-size: cover;
   background-position: center;
+  padding-bottom: 50px;
 }
 
 .lower__block {
@@ -14,7 +15,7 @@
 }
 
 .upper__block {
-  padding: 40px 0;
+  padding: 120px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +29,8 @@
 }
 
 .header{
+  position: fixed;
+  width: 100%;
   background-color: #004481;
   color:white;
   padding: 20px;
@@ -35,10 +38,15 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  z-index: 1;
 }
 
 .header__title {
-  font-size: 18px;
+  height: 50px;
+  width: 190px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0;
 }
 

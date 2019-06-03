@@ -44,11 +44,7 @@
 }
 
 .header__title {
-  height: 50px;
-  width: 190px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  font-size: 28px;
   margin: 0;
 }
 
@@ -57,5 +53,6 @@
   margin: 0 30px;;
   &:hover{
     transform: translate(5px, 0px);
+    transition: 0.5s;
   }
 }

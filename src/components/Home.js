@@ -9,7 +9,7 @@ class Home extends React.Component {
     return (
       <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
         <div className="header">
-          <div className="header__title" style={{backgroundImage: `url(${logoBlanco})`}}></div>
+          <h1 className="header__title">BBVA IT - Organigram</h1>
           <p className="logout"><i className="fas fa-sign-out-alt"/>  Cerrar Sesión</p>
         </div>
         

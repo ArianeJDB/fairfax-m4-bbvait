@@ -3,6 +3,7 @@ import {fetchPeople} from './data/Data';
 import {Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Areas from './components/Areas';
+import Managers from './components/Managers';
 // import './App.css';
 
 class App extends React.Component {
@@ -55,8 +56,8 @@ class App extends React.Component {
             path="/"
             render={() => (
               <Home
-                chief={this.state.chief}
-                executives={this.state.executives}
+                chief={chief}
+                executives={executives}
               />
             )}
           />
@@ -70,6 +71,7 @@ class App extends React.Component {
               />
             )}
           />
+          <Route path="/managers/:id" component={Managers} />
         </Switch>
       </div>
     );

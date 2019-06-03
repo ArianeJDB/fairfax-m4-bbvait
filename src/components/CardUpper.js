@@ -4,14 +4,23 @@ import fotoCard from '../images/fotoCard.jpg';
 
 class CardLower extends React.Component {
   render () {
+    console.log('chief', this.props.chief)
+    console.log('executives', this.props.executives)
+    
     return (
       <div className="upper__container">
         <div className="upper-block1">
           <div className="upper__img" style={{backgroundImage: `url(${fotoCard})`}}></div>
           <div className="upper-block2">
             <div className="upper-block2__name">
-              <h2 className="upper__name">David</h2>
-              <h2 className="upper__surname">Puente</h2>
+            {this.props.chief === undefined ? 'loading' : 
+            this.props.chief
+              .map(item => {
+                return (
+                  <h2 className="upper__name">{`${item.first_name} ${item.last_name}`}</h2>
+                );
+              }) }
+              {/* <h2 className="upper__surname">{item.last_name}</h2> */}
             </div>
             <h2 className="upper__position">Director General</h2>
           </div>

@@ -17,20 +17,20 @@ class App extends React.Component {
   }
   FetchAllData () {
     fetchPeople ().then (people => {
-      this.setState ({ people : {
-        chief: {...people['chief executive']},
-        executives: {...people.executives},
-        managers: {...people.managers},
-        projects: {...people.projects},
-        staff: {...people.staff},
-      }});
+      this.setState ({
+        chief: [...people['chief executive']],
+        executives: [...people.executives],
+        managers: [...people.managers],
+        projects: [...people.projects],
+        staff: [...people.staff],
+      });
     });
   }
   render () {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" render={() => <Home people={this.state} />} />
+          <Route exact path="/" render={() => <Home chief={this.state.chief} executives={this.state.executives} />} />
           {/* <Route
             path="/areas/:id" render={(props) => people ? <Areas match={props.match} executives={people.executives.find(area => area.id === props.params.id)}/> : 'loading...' } /> */}
         </Switch>

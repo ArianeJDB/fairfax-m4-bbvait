@@ -3,7 +3,6 @@ import CardUpper from './CardUpper';
 import CardLower from './CardLower';
 
 function Areas(props) {
-  render () {
     const {executives, managers} = props;
     const idSelected = parseInt (props.match.params.id);
     let newChief;
@@ -19,13 +18,12 @@ function Areas(props) {
         );
       });
  
-    return (
+        return (
       <p>
         <CardUpper item={newChief} />
         {newElements}
       </p>
     );
-  }
 }
 
 export default Areas;

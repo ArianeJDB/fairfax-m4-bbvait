@@ -10,7 +10,7 @@ class CardLower extends React.Component {
           <div className="upper__img" style={{backgroundImage: `url(${fotoCard})`}}></div>
           <div className="upper-block2">
             <div className="upper-block2__name">
-              <h2 className="upper__name">David</h2>
+              <h2 className="upper__name">{}</h2>
               <h2 className="upper__surname">Puente</h2>
             </div>
             <h2 className="upper__position">Director General</h2>

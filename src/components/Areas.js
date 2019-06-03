@@ -1,14 +1,20 @@
 import React from 'react';
+import CardUpper from './CardUpper';
 
 class Areas extends React.Component {
-    render () {
-        console.log(this.props.executives);
-        // const { executives } = this.props;
-        // const idSelected = parseInt(this.props.match.params.id);
-        console.log(this.props.executives[0]);
-        // const newChief = executives.find(executives => executives.id === idSelected);
-        return <p>Hola</p>
+  render () {
+    const {executives} = this.props;
+    let newChief;
+    if (executives !== undefined) {
+      const idSelected = parseInt(this.props.match.params.id);
+      newChief = executives.find (
+        executive => executive.id === idSelected
+      );
     }
+    return <p>
+        <CardUpper chief={newChief}/>
+    </p>;
+  }
 }
 
-export default Areas; 
+export default Areas;

@@ -9,10 +9,20 @@ class Home extends React.Component {
       <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
         <div className="header">
           <h1 className="header__title">BBVA-IT - ORGANIGRAM</h1>
-          <p className="logout"><i class="fas fa-sign-out-alt">  Logout</i></p>
+          <p className="logout"><i className="fas fa-sign-out-alt"/> Logout</p>
         </div>
         <div className="upper__block">
-          <CardUpper className="card__level1"/>
+          {this.props.chief === undefined ? 'loading' : this.props.chief
+            .map(item => {
+              return (
+                <div className="card__level1">
+                  <CardUpper
+                  item={item}
+                    />
+                </div>
+              );
+            })}
+          
         </div>
         {/* <hr className="horizontal-line"/> */}
         <ul className="lower__block">

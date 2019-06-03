@@ -14,6 +14,7 @@ class App extends React.Component {
       managers: [],
       projects: [],
       staff: [],
+      isLoading: true,
     };
   }
 
@@ -29,17 +30,46 @@ class App extends React.Component {
         managers: [...people.managers],
         projects: [...people.projects],
         staff: [...people.staff],
+        isLoading: false,
       });
     });
   }
   render () {
-    const { chief, executives, managers, projects, staff } = this.state;
+    const {
+      chief,
+      executives,
+      managers,
+      projects,
+      staff,
+      isLoading,
+    } = this.state;
+
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" render={() => <Home/>} />
           <Route
-            path="/areas/:id" render={props => <Areas match={props.match} executives={executives} managers={managers} />} />
+            exact
+            path="/"
+            render={() => (
+              <Home
+                chief={this.state.chief}
+                executives={this.state.executives}
+              />
+            )}
+          />
+          <Route
+            path="/areas/:id"
+            render={props => (
+              <Areas
+                match={props.match}
+                executives={executives}
+                managers={managers}
+              />
+            )}
+          />
         </Switch>
       </div>
     );

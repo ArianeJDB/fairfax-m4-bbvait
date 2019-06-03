@@ -3,20 +3,21 @@ import fotoCard from '../images/fotoCard.jpg';
 import { Radar } from 'react-chartjs-2';
 
 class PersonDetail extends React.Component {
-  data= {
+  data = {
     labels: ['Running', 'Swimming', 'Eating', 'Cycling'],
     datasets: [{
-        data: [20, 10, 4, 2]
+      data: [20, 10, 4, 2]
     }]
-}
+  }
   render() {
+    const { staff } = this.props
     return (
       <div className="box__container">
         <div className="header">
           <h1 className="header__title">BBVA-IT - ORGANIGRAM</h1>
           <p className="logout"><i className="fas fa-sign-out-alt">  Logout</i></p>
         </div>
-        <main>
+        <main className='main_wrapper'>
           <div className="upper-block2__name">
             <div className="detail__img" style={{ backgroundImage: `url(${fotoCard})` }}></div>
             <div className='info_wrapper'>
@@ -25,7 +26,7 @@ class PersonDetail extends React.Component {
                   <h2 className="upper__name">David</h2>
                   <h2 className="upper__surname">Puente</h2>
                 </div>
-                <div className='upper_contact'>
+                <div>
                   <h3 className="upper__email">xxxxxxxx@gmail.com</h3>
                   <p>Phone - ext</p>
                 </div>
@@ -37,7 +38,6 @@ class PersonDetail extends React.Component {
               </div>
             </div>
           </div>
-          <div>
             <div className='upper_subsection'>
               <div>
                 <p>Area</p>
@@ -50,8 +50,8 @@ class PersonDetail extends React.Component {
                 <p>Rol</p>
                 <p>Tecnologias</p>
               </div>
-
             </div>
+            <div className='detail_skills_wrapper'>
             <div className="card text-center card_wrapper">
               <div className="card-header">
                 <ul className="nav nav-tabs card-header-tabs">
@@ -77,18 +77,17 @@ class PersonDetail extends React.Component {
               </div>
               <div className="charts">
                 <div>
-                <div className=' card mb-3'style={{width:'400px'}}>
-                {/* <p>{this.props.match.params.areasID}</p> */}
-                <div className='card_wrapper' style={{width:'300px'}}>
-                    <h2>Doughnut Example</h2>
-                    <Radar data={this.data} />
+                  <div className=' card mb-3' style={{ width: '400px' }}>
+                    {/* <p>{this.props.match.params.areasID}</p> */}
+                    <div className='card_wrapper' style={{ width: '300px' }}>
+                      <h2>Doughnut Example</h2>
+                      <Radar data={this.data} />
+                    </div>
+                  </div>
                 </div>
-            </div>
-                </div>
-
               </div>
             </div>
-          </div>
+            </div>
         </main>
       </div>
     )

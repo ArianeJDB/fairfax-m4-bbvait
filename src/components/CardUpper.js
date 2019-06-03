@@ -22,7 +22,7 @@ class CardLower extends React.Component {
           <h3 className="upper__area">Area</h3>
         </div>
         <div className="upper__link">
-          <Link to="/areas1">Detalles</Link>
+          <Link to= "/person/:id">Detalle</Link>
         </div>
         
       </div>

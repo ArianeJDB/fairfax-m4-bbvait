@@ -2,8 +2,8 @@ import React from 'react';
 import { fetchPeople } from './data/Data';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import Areas from './components/Areas';
-// import './App.css';
+// import Areas from './components/Areas';
+import PersonDetail from './components/PersonDetail';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,13 +33,12 @@ class App extends React.Component {
             people={people}/>
           }
           />
-          <Route
-            path="/person/:role/:id" render={({match}) =>  
-            people ? <Areas person ={people[match.params.role].find(person => person.id === match.params.id)} /> : 'Loading...'
-        }/>
+          <Route path="/person/:id" render={(detail) => 
+          <PersonDetail/>}/>
         </Switch>
       </div>
     );
   }
 }
 export default App
+

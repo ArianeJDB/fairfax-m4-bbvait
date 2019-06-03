@@ -36,7 +36,13 @@ class App extends React.Component {
   }
 
   render() {
-    const { chief, executives, managers, projects, staff, isLoading } = this.state
+    const { 
+      // chief, 
+      executives, 
+      managers, 
+      // projects, 
+      // staff, 
+      isLoading } = this.state
     if (isLoading) {
       return <div>Loading...</div>
     }

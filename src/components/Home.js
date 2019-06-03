@@ -18,7 +18,7 @@ class Home extends React.Component {
                 <div className="card__level1">
                   <CardUpper
                   item={item}
-                    />
+                  />
                 </div>
               );
             })}
@@ -26,21 +26,21 @@ class Home extends React.Component {
         </div>
         {/* <hr className="horizontal-line"/> */}
         <ul className="lower__block">
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
+          {this.props.executives === undefined ? 'loading' : this.props.executives
+            .map(item => {
+              console.log('item', item);
+              return (
+                <li>
+                  <CardLower 
+                    first_name={item.first_name}
+                    last_name={item.last_name}
+                    email={item.email}
+                    extension={item.extension}
+                    phone={item.phone}
+                    area={item.area} />
+                </li>
+              )
+            })}
         </ul>
       </div>
     );

@@ -13,8 +13,7 @@ class CardLower extends React.Component {
           />
           <div className="block2">
             <div className="block2__name">
-              <h2 className="card__name">David</h2>
-              <h2 className="card__surname">Puente</h2>
+              <h2 className="card__name">{`${this.props.first_name} ${this.props.last_name}`}</h2>
             </div>
             <h2 className="card__position">Director de Area</h2>
           </div>
@@ -22,9 +21,9 @@ class CardLower extends React.Component {
         </div>
         <div className="block3">
           <div className="card__details">
-            <h3 className="card__email">xxxxxxx@gmail.com</h3>
-            <h3 className="card__phone">666 666 666</h3>
-            <h3 className="card__area">Area</h3>
+            <h3 className="card__email">{this.props.email}</h3>
+            <h3 className="card__phone">{`${this.props.phone} Ext: ${this.props.extension}`}</h3>
+            <h3 className="card__area">Área: {this.props.area}</h3>
           </div>
           <div className="card__link">
             <Link to="/areas1">Detalles</Link>

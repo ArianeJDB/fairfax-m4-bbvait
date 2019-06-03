@@ -7,9 +7,7 @@ class CardLower extends React.Component {
     return (
       <div className="card__container">
         <div className="block1">
-          <div
-            className="card__img"
-            style={{backgroundImage: `url(${fotoCard})`}}
+          <div className="card__img" style={{backgroundImage: `url(${fotoCard})`}}
           />
           <div className="block2">
             <div className="block2__name">
@@ -17,7 +15,6 @@ class CardLower extends React.Component {
             </div>
             <h2 className="card__position">Director de Area</h2>
           </div>
-
         </div>
         <div className="block3">
           <div className="card__details">

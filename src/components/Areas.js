@@ -3,7 +3,10 @@ import React from 'react';
 class Areas extends React.Component {
     render () {
         console.log(this.props.executives);
-        console.log(this.props.match.params);
+        // const { executives } = this.props;
+        // const idSelected = parseInt(this.props.match.params.id);
+        console.log(this.props.executives[0]);
+        // const newChief = executives.find(executives => executives.id === idSelected);
         return <p>Hola</p>
     }
 }

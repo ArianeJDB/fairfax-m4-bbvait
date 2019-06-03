@@ -9,30 +9,37 @@ class App extends React.Component {
   constructor (props) {
     super (props);
     this.state = {
-      people: null,
+      chief: [],
+      executives: [],
+      managers: [],
+      projects: [],
+      staff: [],
     };
   }
+
   componentDidMount () {
     this.FetchAllData ();
   }
+
   FetchAllData () {
     fetchPeople ().then (people => {
-      this.setState ({ people : {
-        chief: {...people['chief executive']},
-        executives: {...people.executives},
-        managers: {...people.managers},
-        projects: {...people.projects},
-        staff: {...people.staff},
-      }});
+      this.setState ({
+        chief: [...people['chief executive']],
+        executives: [...people.executives],
+        managers: [...people.managers],
+        projects: [...people.projects],
+        staff: [...people.staff],
+      });
     });
   }
   render () {
+    const { chief, executives, managers, projects, staff } = this.state;
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" render={() => <Home people={this.state} />} />
-          {/* <Route
-            path="/areas/:id" render={(props) => people ? <Areas match={props.match} executives={people.executives.find(area => area.id === props.params.id)}/> : 'loading...' } /> */}
+          <Route exact path="/" render={() => <Home/>} />
+          <Route
+            path="/areas/:id" render={props => <Areas match={props.match} executives={executives} managers={managers} />} />
         </Switch>
       </div>
     );

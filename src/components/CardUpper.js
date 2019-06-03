@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import fotoCard from '../images/fotoCard.jpg';
 
-class CardLower extends React.Component {
+class CardUpper extends React.Component {
   render () {
     return (
       <div className="upper__container">
@@ -18,9 +18,13 @@ class CardLower extends React.Component {
 
         </div>
         <div className="upper-block3">
-          <h3 className="upper__email">xxxxxxxx@gmail.com</h3>
-          <h3 className="card__phone">666 666 666</h3>
-          <h3 className="upper__area">Area</h3>
+          <div className="upper__details">
+            <div className="upper__contact">
+              <h3 className="upper__email">xxxxxxxx@gmail.com</h3>
+              <h3 className="card__phone">666666666</h3>
+            </div>
+            <h3 className="upper__area">Area</h3>
+          </div>
         </div>
         <div className="upper__link">
           <Link to="/areas1">Detalles</Link>
@@ -31,4 +35,4 @@ class CardLower extends React.Component {
   }
 }
 
-export default CardLower;
+export default CardUpper;

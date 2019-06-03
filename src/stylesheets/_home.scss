@@ -23,9 +23,11 @@
 
 .horizontal-line {
   width: 80%;
-  color: gainsboro;
+  // color: gainsboro;
+  border-top: 2px solid #FFFFFF;
   padding-top: 24px;
   margin-top: 0;
+  opacity: 0.8;
 }
 
 .header{

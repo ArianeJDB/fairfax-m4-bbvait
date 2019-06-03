@@ -8,7 +8,7 @@ class Home extends React.Component {
     return (
       <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
         <div className="header">
-          <span className="header__titke">Organigrama</span>
+          <span className="header__title">Organigrama</span>
           <p className="logout"><i className="fas fa-sign-out-alt"/>  Cerrar Sesión</p>
         </div>
         

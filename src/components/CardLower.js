@@ -5,7 +5,7 @@ import fotoCard from '../images/fotoCard.jpg';
 class CardLower extends React.Component {
   render () {
     const {first_name, last_name, email, phone, area} = this.props.item;
-    console.log(this.props.item);
+
     return (
       <div className="card__container">
         <div className="block1">

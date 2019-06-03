@@ -12,9 +12,17 @@ class Home extends React.Component {
           <p className="logout"><i className="fas fa-sign-out-alt"/> Logout</p>
         </div>
         <div className="upper__block">
-          <CardUpper className="card__level1" 
-            chief={this.props.chief} 
-            executives={this.props.executives} />
+          {this.props.chief === undefined ? 'loading' : this.props.chief
+            .map(item => {
+              return (
+                <div className="card__level1">
+                  <CardUpper
+                  item={item}
+                    />
+                </div>
+              );
+            })}
+          
         </div>
         {/* <hr className="horizontal-line"/> */}
         <ul className="lower__block">

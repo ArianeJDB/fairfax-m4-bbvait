@@ -6,6 +6,7 @@ import Areas from './components/Areas';
 import PersonDetail from './components/PersonDetail';
 // import Managers from './components/Managers';
 import Loader from './components/Loader';
+import ProjectCard from './components/ProjectCard'
 // import './App.css';
 
 class App extends React.Component {

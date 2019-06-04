@@ -8,7 +8,7 @@ import Managers from './components/Managers';
 import Projects from './components/Projects';
 import Loader from './components/Loader';
 import ProjectCard from './components/ProjectCard'
-import FilterName from './components/FilterName';
+import Filter from './components/Filter';
 // import './App.css';
 
 class App extends React.Component {
@@ -23,6 +23,7 @@ class App extends React.Component {
       isLoading: true,
       filterName: ''
     };
+    this.handleFilterName = this.handleFilterName.bind(this);
   }
 
   componentDidMount () {
@@ -76,7 +77,6 @@ class App extends React.Component {
                 executives={executives}
                 staff={staff}
                 handleFilterName={this.handleFilterName}
-                filterName={filterName}
               />
             )}
           />
@@ -115,9 +115,11 @@ class App extends React.Component {
           <Route 
             path="/search/" 
             render={props => (
-              <FilterName
+              <Filter
                 match={props.match}
                 staff={staff}
+                handleFilterName={this.handleFilterName}
+                filterName={filterName}
               />
             )}
           />

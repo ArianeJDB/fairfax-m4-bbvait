@@ -1,9 +1,26 @@
-.search__container{
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 50px;
+.search {
+  margin-top: 120px;
+  width: 300px;
 }
 
-.search {
-  margin-top: 100px;
+.search__container {
+  display: flex;
+  justify-content: center;
+}
+
+.search__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.search__item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: start;
+  height: 30px;
+  width: 200px;
+  margin: 10px;
 }

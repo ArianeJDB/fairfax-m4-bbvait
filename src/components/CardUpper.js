@@ -21,7 +21,6 @@ class CardUpper extends React.Component {
           <p className="upper__phone">{`${this.props.item.phone} Ext:${this.props.item.extension}`}</p>
         </div>
         <div className="upper__link">
-          <Link to="/areas/2">Detalles</Link>
         </div>
         
       </div>

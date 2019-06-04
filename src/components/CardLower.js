@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import fotoCard from '../images/fotoCard.jpg';
 
 function CardLower (props) {
-  const {first_name, last_name, email, phone, area} = props.item;
+  const {first_name, last_name, email, phone, area, id} = props.item;
+  const {areaLink, position} = props;
   return (
     <div className="card__container">
       <div className="block1">
@@ -15,7 +16,7 @@ function CardLower (props) {
           <div className="block2__name">
             <h2 className="lower__name">{`${first_name} ${last_name}`}</h2>
           </div>
-          <h2 className="card__position">Gerente</h2>
+          <h2 className="card__position">{position}</h2>
         </div>
 
       </div>
@@ -26,7 +27,7 @@ function CardLower (props) {
         </div>
         <div className="card__link">
         <h3 className="card__area">{area}</h3>
-          <Link className="link" to="/areas1">Detalles</Link>
+          <Link className="link" to={`/${areaLink}/${id}`}>Más detalles</Link>
         </div>
       </div>
     </div>

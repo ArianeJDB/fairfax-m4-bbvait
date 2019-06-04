@@ -1,6 +1,8 @@
 import React from 'react';
 import CardUpper from './CardUpper';
 import CardLower from './CardLower';
+import Header from './Header';
+import bbva from '../images/bbva.jpg';
 
 function Areas(props) {
     const {executives, managers} = props;
@@ -13,16 +15,22 @@ function Areas(props) {
       .map ((manager) => {
         return (
           <li key={manager.id}>
-            <CardLower item={manager} />
+            <CardLower item={manager} areaLink="management" position="Gerente"/>
           </li>
         );
       });
  
         return (
-      <p>
+          <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
+         <Header />
+          <div className="upper__block">
         <CardUpper item={newChief} />
+        </div>
+        <hr className="horizontal-line"/>
+        <ul className="lower__block">
         {newElements}
-      </p>
+        </ul>
+      </div>
     );
 }
 

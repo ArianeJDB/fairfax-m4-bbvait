@@ -12,12 +12,12 @@ function Managers(props) {
     const newProject = projects.find(project => project.id === idSelected);
     const newElements = staff
         .filter(person => person.cod_project === idSelected)
-        .map((project) => {
+        .map((person) => {
             return (
                 <li key={person.id}>
                     <ProjectCard
-                        item={project}
-                        areaLink="projects"
+                        item={person}
+                        areaLink="staff"
                     />
                 </li>
             );
@@ -28,7 +28,7 @@ function Managers(props) {
         <div className="box__container" style={{ backgroundImage: `url(${bbva})` }}>
             <Header />
             <div className="upper__block">
-                <CardUpper item={newManager} />
+                <CardUpper item={newProject} />
             </div>
             <hr className="horizontal-line" />
             <ul className="lower__block">

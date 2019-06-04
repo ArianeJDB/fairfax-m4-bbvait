@@ -1,6 +1,6 @@
 import React from 'react';
 import CardUpper from './CardUpper';
-import CardLower from './CardLower';
+import ProjectCard from './ProjectCard';
 import Header from './Header';
 import bbva from '../images/bbva.jpg';
 
@@ -15,7 +15,7 @@ function Managers(props) {
         .map((project) => {
             return (
                 <li key={project.id}>
-                    <CardLower
+                    <ProjectCard
                         item={project}
                         areaLink="projects"
                     />

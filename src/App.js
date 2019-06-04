@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Areas from './components/Areas';
 import PersonDetail from './components/PersonDetail';
-// import Managers from './components/Managers';
+import Managers from './components/Managers';
 import Loader from './components/Loader';
 import ProjectCard from './components/ProjectCard'
 // import './App.css';

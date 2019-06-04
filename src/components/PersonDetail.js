@@ -2,7 +2,19 @@ import React from 'react';
 import fotoCard from '../images/fotoCard.jpg';
 import ChartDetail from './ChartDetail'
 class PersonDetail extends React.Component {
-  
+
+  skills = {
+    "frontend": {
+      "html": {
+        "accesibility": 1,
+        "apis": 4,
+        "canvas": 1,
+        "forms": 2,
+        "html5": 5
+      },
+    },
+  }
+
   render() {
     return (
       <div className="detail__container">
@@ -31,20 +43,20 @@ class PersonDetail extends React.Component {
               </div>
             </div>
           </div>
-            <div className='detail_subsection'>
-              <div>
-                <p>Area</p>
-                <p>Manager</p>
-                <p>Mentor</p>
-              </div>
-              <div>
-                <p>actividad de proyectos</p>
-                <p>Titulo</p>
-                <p>Rol</p>
-                <p>Tecnologias</p>
-              </div>
+          <div className='detail_subsection'>
+            <div>
+              <p>Area</p>
+              <p>Manager</p>
+              <p>Mentor</p>
             </div>
-        <ChartDetail/>
+            <div>
+              <p>actividad de proyectos</p>
+              <p>Titulo</p>
+              <p>Rol</p>
+              <p>Tecnologias</p>
+            </div>
+          </div>
+          <ChartDetail chartData={this.skills} />
         </main>
       </div>
     )

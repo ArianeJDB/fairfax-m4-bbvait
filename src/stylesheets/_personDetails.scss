@@ -1,7 +1,7 @@
-.main_wrapper{
+.main_wrapper {
   height: 100%;
 }
-.info_wrapper{
+.info_wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -16,60 +16,83 @@
     margin-right: 110px;
   }
 }
-.detail__img{
+.detail__img {
   height: 150px;
   width: 150px;
   background-size: cover;
   background-position: center;
   margin: 25px;
 }
-.card_wrapper{
+.card_main_wrapper {
   margin: 0 10px 30px;
   @media (min-width: 768px) {
     margin: 0 80px 100px;
   }
 }
-
-.chart_container{
-  margin: 0 10px 0;
+.card_wrapper {
+  position: relative;
+  // width: 20vw;
+  // height:20vh; 
+  margin: 20px 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  padding: 10px;
   @media (min-width: 768px) {
-    margin: 0 50px 0;
+    margin: 0 10px 55px;
+    padding: 30px;
   }
 }
-.block__info{
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+ 
+}
+
+.chart_container {
+  margin: 0 10px 0;
+  @media (min-width: 768px) {
+    margin: 0 15px 0;
+  }
+}
+.block__info {
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (min-width: 768px) {
     flex-direction: row;
-    justify-content: center; 
+    justify-content: center;
   }
-
 }
-.detail__surname{
+.detail__surname {
   margin-left: 10px;
 }
-.detail_subsection{
+.detail_subsection {
   display: flex;
   flex-direction: column;
   text-align: center;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
-     margin: 30px 100px;
-     padding: 0 40px;
-     text-align: left;
-
+    margin: 30px 100px;
+    padding: 0 40px;
+    text-align: left;
   }
 }
-.btn_skills{
+.btn_skills {
   border: none;
   outline: none;
-  color: #49A5E6;
+  color: #49a5e6;
   &:focus {
-    outline: none
+    outline: none;
   }
   &.active {
-    background-color: #49A5E6 !important;
+    background-color: #49a5e6 !important;
   }
 }

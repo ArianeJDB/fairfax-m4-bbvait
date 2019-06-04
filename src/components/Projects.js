@@ -1,10 +1,10 @@
 import React from 'react';
-import CardUpper from './CardUpper';
-import ProjectCard from './ProjectCard';
+import ProjectUpperCard from './ProjectUpperCard';
 import Header from './Header';
 import bbva from '../images/bbva.jpg';
+import CardLower from './CardLower';
 
-function Managers(props) {
+function Projects (props) {
 
     const { projects, staff } = props;
     const idSelected = parseInt(props.match.params.id);
@@ -15,7 +15,7 @@ function Managers(props) {
         .map((person) => {
             return (
                 <li key={person.id}>
-                    <ProjectCard
+                    <CardLower
                         item={person}
                         areaLink="staff"
                     />
@@ -28,7 +28,7 @@ function Managers(props) {
         <div className="box__container" style={{ backgroundImage: `url(${bbva})` }}>
             <Header />
             <div className="upper__block">
-                <CardUpper item={newProject} />
+                <ProjectUpperCard item={newProject} />
             </div>
             <hr className="horizontal-line" />
             <ul className="lower__block">
@@ -38,4 +38,4 @@ function Managers(props) {
     );
 }
 
-export default Managers;
+export default Projects;

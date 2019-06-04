@@ -75,7 +75,6 @@ class App extends React.Component {
               />
             )}
           />
-
           <Route 
             path="/managers/:id" 
             render={props => (
@@ -97,7 +96,6 @@ class App extends React.Component {
               />
             )}
           />
-
         </Switch>
       </div>
     );

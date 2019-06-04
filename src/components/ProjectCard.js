@@ -4,7 +4,7 @@ import '../stylesheets/_projectCard.scss'
 
 
 function ProjectCard (props) {
-  const {name} = props.item;
+  const {name, id} = props.item;
   // const {areaLink, position} = props;
   return (
     <div className="project__container">
@@ -12,7 +12,7 @@ function ProjectCard (props) {
         <h3 className="project_name">{name}</h3>
           </div>
           <div className='project__link'>
-            <Link className="link" to=''>Más detalles</Link></div>
+            <Link className="link" to={`/projects/${id}`}>Más detalles</Link></div>
           </div>
     
   );

@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Areas from './components/Areas';
 import PersonDetail from './components/PersonDetail';
 import Managers from './components/Managers';
+import Projects from './components/Projects';
 import Loader from './components/Loader';
 import ProjectCard from './components/ProjectCard'
 // import './App.css';
@@ -82,6 +83,17 @@ class App extends React.Component {
                 match={props.match}
                 managers={managers}
                 projects={projects}
+              />
+            )}
+          />
+
+          <Route 
+            path="/projects/:id" 
+            render={props => (
+              <Projects
+                match={props.match}
+                projects={projects}
+                staff={staff}
               />
             )}
           />

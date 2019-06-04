@@ -24,7 +24,10 @@ class Home extends React.Component {
           {this.props.executives.map (item => {
             return (
               <li>
-                <CardLower item={item} areaLink="areas" position="Director de área"/>
+                <CardLower 
+                  item={item} 
+                  areaLink="areas" 
+                  position="Director de área"/>
               </li>
             );
           })}

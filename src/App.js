@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Areas from './components/Areas';
 import Managers from './components/Managers';
 import Loader from './components/Loader';
+import ProjectUpperCard from './components/ProjectUpperCard'
 // import './App.css';
 
 class App extends React.Component {
@@ -73,6 +74,7 @@ class App extends React.Component {
             )}
           />
           <Route path="/managers/:id" component={Managers} />
+          {/* <Route path="/" component={ProjectUpperCard} /> */}
         </Switch>
       </div>
     );

@@ -1,14 +1,16 @@
 .project_name {
-margin: 20px;
+  flex-wrap: wrap;
+  margin: 30px 20px 10px 20px;
 }
 
-.card__container {
+.project__container {
   display: flex;
   flex-direction: column;
   border: 1px solid gainsboro;
   border-radius: 5px;
   margin: 20px;
   height: 110px;
+  width: 400px;
   background-color: #fff;
     &:hover {
       box-shadow: (-2px 3px 10px 0 rgba(0, 0, 0, 0.1));
@@ -17,7 +19,7 @@ margin: 20px;
   }
 }
 
-.card__link{
+.project__link{
   display: flex;
   justify-content: flex-end;
 }

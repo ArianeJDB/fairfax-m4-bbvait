@@ -26,7 +26,6 @@ function CardLower (props) {
           <p className="card__phone">{phone}</p>
         </div>
         <div className="card__link">
-        <h3 className="card__area">{area}</h3>
           <Link className="link" to={`/${areaLink}/${id}`}>Más detalles</Link>
         </div>
       </div>

@@ -1,13 +1,42 @@
+@import 'loader';
 @import 'cardLower';
 @import 'cardUpper';
 @import 'home';
 @import 'personDetails';
 
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/BentonSansBBVA-Book.woff") format("woff"); }
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/BentonSansBBVA-Medium.woff") format("woff"); }
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: normal;
+  font-style: italic;
+  src: url("./fonts/BentonSansBBVA-BookItalic.woff") format("woff"); }
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: 500;
+  font-style: italic;
+  src: url("./fonts/BentonSansBBVA-MediumItalic.woff") format("woff"); }
+
+body {
+  margin: 0;
+}
 
 .App {
-  font-family: 'Roboto';
+  font-family: 'BentonSans','Roboto';
   text-align: center;
   background-color: #f4f4f4;
   height: 100%;
-  
 }
+
+
+
+
+

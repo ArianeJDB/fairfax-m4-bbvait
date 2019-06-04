@@ -27,7 +27,7 @@ class PersonDetail extends React.Component {
             <div className="detail__img" style={{ backgroundImage: `url(${fotoCard})` }}></div>
             <div className='info_wrapper'>
               <div>
-                <div className="block__info">
+                <div className="block__info_names">
                   <h2 className="detail__name">David</h2>
                   <h2 className="detail__surname">Puente</h2>
                 </div>

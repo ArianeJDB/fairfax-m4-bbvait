@@ -8,6 +8,7 @@ import Managers from './components/Managers';
 import Projects from './components/Projects';
 import Loader from './components/Loader';
 import ProjectCard from './components/ProjectCard'
+
 // import './App.css';
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
       projects: [],
       staff: [],
       isLoading: true,
+      
     };
   }
 
@@ -40,6 +42,7 @@ class App extends React.Component {
       );
     });
   }
+
   render () {
     const {
       chief,
@@ -48,6 +51,7 @@ class App extends React.Component {
       projects,
       staff,
       isLoading,
+      photo,
     } = this.state;
 
     if (isLoading) {
@@ -61,6 +65,7 @@ class App extends React.Component {
             path="/"
             render={() => (
               <Home
+                photo={photo}
                 chief={chief}
                 executives={executives}
               />

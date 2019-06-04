@@ -31,10 +31,11 @@
 
 .block2{
   display: flex;
+  width: 178px;
   flex-direction: column;
   justify-content: center;
+  align-content: stretch;
   align-items: flex-end;
-  margin-right: 38px;
 }
 
 .block2__name{

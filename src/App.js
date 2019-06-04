@@ -72,7 +72,16 @@ class App extends React.Component {
               />
             )}
           />
-          <Route path="/managers/:id" component={Managers} />
+          <Route 
+            path="/managers/:id" 
+            render={props => (
+              <Managers
+                match={props.match}
+                managers={managers}
+                projects={projects}
+              />
+            )}
+          />
         </Switch>
       </div>
     );

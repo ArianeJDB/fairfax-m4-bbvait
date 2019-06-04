@@ -17,7 +17,7 @@ function BreadCrumbs (props) {
     return (
       <React.Fragment>
         <li key={`bc-${index}`} className="list__item--bc">
-          {<Link to={route.path}>{route.label}</Link>}
+          {<Link to={route.path} className="link__bc">{route.label}</Link>}
           <i className="fas fa-angle-right icon__bc" />
         </li>
       </React.Fragment>

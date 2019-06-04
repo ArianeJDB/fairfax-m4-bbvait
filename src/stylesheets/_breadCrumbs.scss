@@ -17,8 +17,12 @@
     align-items: center;
 }
 
-.list__item--bc:last-child .icon__bc{
+.list__item--bc:last-child .icon__bc {
     display: none;
+}
+
+.list__item--bc:last-child .link__bc {
+    font-weight: 500;
 }
 
 .icon__bc {

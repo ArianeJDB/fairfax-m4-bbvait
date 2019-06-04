@@ -26,7 +26,7 @@ function Projects (props) {
     return (
 
         <div className="box__container" style={{ backgroundImage: `url(${bbva})` }}>
-            <Header />
+            <Header pathNav={`/projects/${idSelected}`} labelNav={newProject.name}/>
             <div className="upper__block">
                 <ProjectUpperCard item={newProject} />
             </div>

@@ -8,7 +8,7 @@ class Home extends React.Component {
   render () {
     return (
       <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
-        <Header pathNav="/" labelNav="Inicio"/>
+        <Header pathNav="/" labelNav="Inicio" />
         <div className="upper__block">
           {this.props.chief.map (item => {
             return (

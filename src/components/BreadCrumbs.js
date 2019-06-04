@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
 function BreadCrumbs (props) {
   const {pathNav, labelNav} = props;
 
@@ -27,6 +28,9 @@ function BreadCrumbs (props) {
   return (
     <nav className="nav__container">
       {newBC}
+      <Link className="link" to='/search/'>
+        <i class="fas fa-search icon_search"></i>
+      </Link>
     </nav>
   );
 }

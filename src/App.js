@@ -8,6 +8,7 @@ import Managers from './components/Managers';
 import Projects from './components/Projects';
 import Loader from './components/Loader';
 import ProjectCard from './components/ProjectCard'
+import FilterName from './components/FilterName';
 // import './App.css';
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
       projects: [],
       staff: [],
       isLoading: true,
+      filterName: ''
     };
   }
 
@@ -40,6 +42,14 @@ class App extends React.Component {
       );
     });
   }
+
+  handleFilterName(e) {
+    const value = e.currentTarget.value;
+    this.setState({
+      filterName: value
+    })
+  }
+
   render () {
     const {
       chief,
@@ -48,6 +58,7 @@ class App extends React.Component {
       projects,
       staff,
       isLoading,
+      filterName
     } = this.state;
 
     if (isLoading) {
@@ -63,6 +74,9 @@ class App extends React.Component {
               <Home
                 chief={chief}
                 executives={executives}
+                staff={staff}
+                handleFilterName={this.handleFilterName}
+                filterName={filterName}
               />
             )}
           />
@@ -93,6 +107,16 @@ class App extends React.Component {
               <Projects
                 match={props.match}
                 projects={projects}
+                staff={staff}
+              />
+            )}
+          />
+
+          <Route 
+            path="/search/" 
+            render={props => (
+              <FilterName
+                match={props.match}
                 staff={staff}
               />
             )}

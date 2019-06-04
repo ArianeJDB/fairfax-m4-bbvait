@@ -1,6 +1,7 @@
 .nav__container {
     position: fixed;
     display: flex;
+    justify-content: space-between;
     top: 60px;
     width: 100%;
     background-color: white;
@@ -30,4 +31,10 @@
     color: lightgrey;
     padding: 0 10px;
     bottom: -30px;
+}
+
+.icon_search {
+    font-size: 20px; 
+    color: lightgrey;
+    margin-right: 20px;
 }

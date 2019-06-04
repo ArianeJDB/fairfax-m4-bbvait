@@ -18,7 +18,12 @@ class App extends React.Component {
       projects: [],
       staff: [],
       isLoading: true,
+      selectedGraph: 'frontend',
+      infoManagement: false
+      
     };
+    this.handleSkillsBtn = this.handleSkillsBtn.bind(this);
+    // this.handleManagmentBtn = this.handleManagmentBtn.bind(this);
   }
 
   componentDidMount () {
@@ -37,6 +42,17 @@ class App extends React.Component {
       });
     });
   }
+  handleSkillsBtn(graph) {
+    this.setState(state => ({
+      selectedGraph: graph,
+    }))
+  }
+  // handleManagmentBtn(){
+  //   this.setState(state => ({
+  //     infoManagement: true,
+
+  //   }))
+  // }
   render () {
     const {
       chief,
@@ -45,6 +61,9 @@ class App extends React.Component {
       projects,
       staff,
       isLoading,
+      selectedGraph,
+      infoManagement
+      // handleSkillsBtn
     } = this.state;
 
     if (isLoading) {
@@ -73,9 +92,17 @@ class App extends React.Component {
               />
             )}
           />
-          <Route path="/person/:id" render={(detail) =>
+          <Route path="/staff/:id" render={(props) =>
             <PersonDetail
-              staff={this.state.staff}
+              staff={staff}
+              match={props.match}
+              selectedGraph={selectedGraph}
+              infoManagement={infoManagement}
+              handleSkillsBtn={this.handleSkillsBtn}
+              handleManagmentBtn={this.handleManagmentBtn}
+              projects={projects}
+              managers={managers}
+              executives={executives}
             />} />
         </Switch>
       </div>

@@ -18,7 +18,8 @@ function Areas(props) {
             <CardLower 
               item={manager} 
               areaLink="managers" 
-              position="Gerente"/>
+              position="Gerente"
+              newChief={newChief.area}/>
           </li>
         );
       });

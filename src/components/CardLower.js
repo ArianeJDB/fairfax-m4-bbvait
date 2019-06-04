@@ -4,7 +4,7 @@ import fotoCard from '../images/fotoCard.jpg';
 
 function CardLower (props) {
   const {first_name, last_name, email, phone, area, id} = props.item;
-  const {areaLink, position} = props;
+  const {areaLink, position,newChief} = props;
   return (
     <div className="card__container">
       <div className="block1">
@@ -26,6 +26,9 @@ function CardLower (props) {
           <p className="card__phone">{phone}</p>
         </div>
         <div className="card__link">
+        <h3 className="card__area">
+          {Number.isInteger(area) ? newChief : ''}
+        </h3>
           <Link className="link" to={`/${areaLink}/${id}`}>Más detalles</Link>
         </div>
       </div>

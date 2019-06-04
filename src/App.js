@@ -34,7 +34,8 @@ class App extends React.Component {
         projects: [...people.projects],
         staff: [...people.staff],
         isLoading: false,
-      });
+      },
+      );
     });
   }
   render () {

@@ -26,7 +26,7 @@ function Managers(props) {
     return (
 
         <div className="box__container" style={{ backgroundImage: `url(${bbva})` }}>
-            <Header />
+            <Header pathNav={`/managers/${idSelected}`} labelNav="Gerencia" />
             <div className="upper__block">
                 <CardUpper item={newManager} />
             </div>

@@ -1,0 +1,33 @@
+.nav__container {
+    position: fixed;
+    display: flex;
+    top: 60px;
+    width: 100%;
+    background-color: white;
+    color:white;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.list__item--bc {
+    display: flex;
+    align-items: center;
+}
+
+.list__item--bc:last-child .icon__bc {
+    display: none;
+}
+
+.list__item--bc:last-child .link__bc {
+    font-weight: 500;
+}
+
+.icon__bc {
+    font-size: 20px; 
+    color: lightgrey;
+    padding: 0 10px;
+    bottom: -30px;
+}

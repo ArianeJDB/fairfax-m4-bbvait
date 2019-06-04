@@ -22,12 +22,12 @@ function CardLower (props) {
       </div>
       <div className="block3">
         <div className="card__details">
-          <h3 className="card__email">{`mailto:${email}`}</h3>
-          <h3 className="card__phone">{phone}</h3>
-          <h3 className="card__area">{area}</h3>
+          <p className="card__email">{email}</p>
+          <p className="card__phone">{phone}</p>
         </div>
         <div className="card__link">
-          <Link to={`/${areaLink}/${id}`}>Más detalles</Link>
+        <h3 className="card__area">{area}</h3>
+          <Link className="link" to={`/${areaLink}/${id}`}>Más detalles</Link>
         </div>
       </div>
     </div>

@@ -17,12 +17,10 @@ class CardUpper extends React.Component {
           </div>
         </div>
         <div className="upper-block3">
-          <h3 className="upper__email">{this.props.item.email}</h3>
+          <p className="upper__email">{this.props.item.email}</p>
           <p className="upper__phone">{`${this.props.item.phone} Ext:${this.props.item.extension}`}</p>
-          <h3 className="upper__area">Área: {this.props.item.area}</h3>
         </div>
         <div className="upper__link">
-          <Link to="/areas/2">Detalles</Link>
         </div>
         
       </div>

@@ -15,22 +15,25 @@ function Areas(props) {
       .map ((manager) => {
         return (
           <li key={manager.id}>
-            <CardLower item={manager} areaLink="management" position="Gerente"/>
+            <CardLower 
+              item={manager} 
+              areaLink="managers" 
+              position="Gerente"/>
           </li>
         );
       });
  
         return (
           <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
-         <Header />
-          <div className="upper__block">
-        <CardUpper item={newChief} />
-        </div>
-        <hr className="horizontal-line"/>
-        <ul className="lower__block">
-        {newElements}
-        </ul>
-      </div>
+            <Header />
+            <div className="upper__block">
+              <CardUpper item={newChief} />
+            </div>
+            <hr className="horizontal-line"/>
+            <ul className="lower__block">
+              {newElements}
+            </ul>
+          </div>
     );
 }
 

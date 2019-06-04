@@ -9,6 +9,7 @@ class Card extends React.Component {
         <h3>Job</h3>
         <h3>Area</h3>
         <Link to="/areas1">More info</Link>
+       
       </div>
     );
   }

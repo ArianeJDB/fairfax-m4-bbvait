@@ -3,8 +3,10 @@ import {fetchPeople} from './data/Data';
 import {Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Areas from './components/Areas';
-import Managers from './components/Managers';
+import PersonDetail from './components/PersonDetail';
+// import Managers from './components/Managers';
 import Loader from './components/Loader';
+import ProjectCard from './components/ProjectCard'
 // import './App.css';
 
 class App extends React.Component {
@@ -72,6 +74,7 @@ class App extends React.Component {
               />
             )}
           />
+
           <Route 
             path="/managers/:id" 
             render={props => (
@@ -82,6 +85,7 @@ class App extends React.Component {
               />
             )}
           />
+
         </Switch>
       </div>
     );

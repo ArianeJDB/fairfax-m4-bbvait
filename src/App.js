@@ -1,26 +1,78 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { fetchPeople } from './data/Data';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Areas from './components/Areas';
+import PersonDetail from './components/PersonDetail';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      chief: [],
+      executives: [],
+      managers: [],
+      projects: [],
+      staff: [],
+      isLoading: true,
+
+    };
+  }
+  componentDidMount() {
+    this.FetchAllData();
+  }
+  FetchAllData() {
+    fetchPeople()
+      .then(people => {
+        this.setState({
+          chief: [...people['chief executive']],
+          executives: [...people.executives],
+          managers: [...people.managers],
+          projects: [...people.projects],
+          staff: [...people.staff],
+          isLoading: false,
+        });
+      });
+  }
+
+  render() {
+    const { 
+      // chief, 
+      executives, 
+      managers, 
+      // projects, 
+      // staff, 
+      isLoading } = this.state
+    if (isLoading) {
+      return <div>Loading...</div>
+    }
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/" render={() =>
+            <Home
+              chief={this.state.chief}
+              executives={this.state.executives} />
+          }
+          />
+          <Route
+            path="/areas/:id"
+            render={props => (
+              <Areas
+                match={props.match}
+                executives={executives}
+                managers={managers}
+              />
+            )}
+          />
+          <Route path="/person/:id" render={(detail) =>
+            <PersonDetail
+              staff={this.state.staff}
+            />} />
+        </Switch>
+      </div>
+    );
+  }
 }
+export default App
 
-export default App;

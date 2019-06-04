@@ -1,0 +1,52 @@
+.box__container{
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.lower__block {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper__block {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-line {
+  width: 80%;
+  color: gainsboro;
+  padding-top: 24px;
+  margin-top: 0;
+}
+
+.header{
+  background-color: #004481;
+  color:white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.header__title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logout{
+  font-size: 16px;
+  margin: 0 30px;;
+  &:hover{
+    transform: translate(5px, 0px);
+  }
+}

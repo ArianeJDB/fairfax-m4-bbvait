@@ -15,7 +15,7 @@ function Areas(props) {
       .map ((manager) => {
         return (
           <li key={manager.id}>
-            <CardLower item={manager} areaLink="management"/>
+            <CardLower item={manager} areaLink="management" position="Gerente"/>
           </li>
         );
       });

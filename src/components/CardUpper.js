@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import fotoCard from '../images/fotoCard.jpg';
-import { isTemplateElement } from '@babel/types';
+// import { isTemplateElement } from '@babel/types';
 
 class CardUpper extends React.Component {
   render () {
@@ -21,6 +21,7 @@ class CardUpper extends React.Component {
           <p className="upper__phone">{`${this.props.item.phone} Ext:${this.props.item.extension}`}</p>
         </div>
         <div className="upper__link">
+          {/* <Link to= "/person/:id">Detalle</Link> */}
         </div>
         
       </div>

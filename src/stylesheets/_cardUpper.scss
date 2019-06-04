@@ -14,12 +14,10 @@
       transition: 0.5s;
   }
 }
-
 .upper-block1{
   display: flex;
   justify-content: space-between;
 }
-
 .upper__img {
   height: 140px;
   width: 140px;
@@ -27,9 +25,7 @@
   background-position: center;
   border-radius: 50%;
   margin: 25px;
-
 }
-
 .upper-block2{
   display: flex;
   flex-direction: column;
@@ -38,22 +34,18 @@
   margin-right: 38px;
  
 }
-
 .upper-block2__name{
   display: flex;
 }
-
 .upper__name {
   margin-right: 10px;
   font-size: 32px;
   text-align: right;
 }
-
 .upper__position{
   font-size: 24px;
   color: gray;
 }
-
 .upper-block3{
   display: flex;
   justify-content: space-between;
@@ -80,12 +72,10 @@
 .upper__phone{
   font-size: 16px;
 }
-
 .upper__area{
   font-size: 20px;
   margin: 0%;
 }
-
 .upper__link{
   width: 90%;
   text-align: right;

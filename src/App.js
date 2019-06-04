@@ -3,7 +3,8 @@ import {fetchPeople} from './data/Data';
 import {Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 import Areas from './components/Areas';
-import Managers from './components/Managers';
+import PersonDetail from './components/PersonDetail';
+// import Managers from './components/Managers';
 import Loader from './components/Loader';
 // import './App.css';
 
@@ -72,7 +73,10 @@ class App extends React.Component {
               />
             )}
           />
-          <Route path="/managers/:id" component={Managers} />
+          <Route path="/person/:id" render={(detail) =>
+            <PersonDetail
+              staff={this.state.staff}
+            />} />
         </Switch>
       </div>
     );

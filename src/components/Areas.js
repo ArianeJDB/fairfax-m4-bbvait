@@ -23,7 +23,7 @@ function Areas(props) {
           </li>
         );
       });
- 
+
         return (
           <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
             <Header />

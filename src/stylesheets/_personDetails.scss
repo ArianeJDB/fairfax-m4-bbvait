@@ -32,8 +32,6 @@
 }
 .card_wrapper {
   position: relative;
-  // width: 20vw;
-  // height:20vh; 
   margin: 20px 10px 30px;
   display: flex;
   justify-content: center;
@@ -95,4 +93,8 @@
   &.active {
     background-color: #49a5e6 !important;
   }
+}
+
+.hidden{
+  display: none;
 }

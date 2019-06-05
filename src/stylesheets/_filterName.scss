@@ -29,17 +29,20 @@
 
 .search__item {
   display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
   align-items: center;
   background-color: white;
   text-align: start;
   height: 30px;
-  width: 200px;
+  width: 250px;
   margin: 15px 15px 0 0;
 }
 
 .search__container {
   width: 100%;
 }
+
 .search__results--container {
   padding: 0 30px;
   width: 100%;
@@ -50,4 +53,13 @@
   text-align: start;
   margin-top: 30px;
   width: 100%;
+}
+
+.contact__icon {
+  color: grey;
+  cursor: pointer;
+}
+
+.contact__icon:first-child {
+  margin-right: 10px;
 }

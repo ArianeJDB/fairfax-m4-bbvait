@@ -1,7 +1,7 @@
 import React from 'react';
-// import fotoCard from '../images/fotoCard.jpg';
 import ChartDetail from './ChartDetail'
 import Header from './Header';
+import PropTypes from 'prop-types';
 
 function PersonDetail(props) {
   const {staff, selectedGraph, handleSkillsBtn, infoManagement, handleManagmentBtn, projects, managers, executives} = props;
@@ -10,7 +10,6 @@ function PersonDetail(props) {
   const projectInfo = projects.find (item => item.id === personalStaff.cod_project);
   const areaInfo = managers.find(item => item.id === projectInfo.id_subarea)
   const executiveInfo = executives.find(item => item.id === areaInfo.area)
-  console.log(executiveInfo)
     return (
       <div className="detail__container">
         <Header pathNav={`/staff/${idSelected}`} labelNav={`${personalStaff.first_name} ${personalStaff.last_name}`} /> 
@@ -29,8 +28,8 @@ function PersonDetail(props) {
                 </div>
                 <div className="social_media">
                 <i className="fab fa-linkedin social_media_icon"></i>
-                <i class="fab fa-github-square social_media_icon"></i>
-                <i class="fab fa-twitter-square social_media_icon"></i>
+                <i className="fab fa-github-square social_media_icon"></i>
+                <i className="fab fa-twitter-square social_media_icon"></i>
 
                 </div>
               </div>
@@ -70,5 +69,15 @@ function PersonDetail(props) {
         </main>
       </div>
     )
+  }
+  PersonDetail.propTypes = {
+    staff:PropTypes.array,
+    selectedGraph:PropTypes.string, 
+    handleSkillsBtn:PropTypes.func,
+    infoManagement:PropTypes.bool, 
+    handleManagmentBtn:PropTypes.func, 
+    projects:PropTypes.array, 
+    managers:PropTypes.array, 
+    executives:PropTypes.array
   }
 export default PersonDetail;

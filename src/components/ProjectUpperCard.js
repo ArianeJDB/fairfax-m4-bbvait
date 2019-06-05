@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/_projectUpperCard.scss'
+import PropTypes from 'prop-types';
 
 function ProjectUpperCard (props) {
   
@@ -31,5 +32,10 @@ function ProjectUpperCard (props) {
     );
   
 }
-
+ProjectUpperCard.propTypes = {
+  name:PropTypes.string, 
+  description:PropTypes.string,
+  technology_1:PropTypes.string, 
+  technology_2:PropTypes.string
+}
 export default ProjectUpperCard;

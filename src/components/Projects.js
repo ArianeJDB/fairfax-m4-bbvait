@@ -3,6 +3,7 @@ import ProjectUpperCard from './ProjectUpperCard';
 import Header from './Header';
 import bbva from '../images/bbva.jpg';
 import CardLower from './CardLower';
+import PropTypes from 'prop-types';
 
 function Projects (props) {
 
@@ -36,5 +37,8 @@ function Projects (props) {
         </div>
     );
 }
-
+Projects.propTypes = {
+    staff:PropTypes.array,
+    projects:PropTypes.array
+}
 export default Projects;

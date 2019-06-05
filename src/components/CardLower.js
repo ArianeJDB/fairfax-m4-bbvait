@@ -9,6 +9,7 @@ import juanito from '../images/juanito.jpg';
 import Maria from '../images/Maria.jpg';
 import PacoGuay from '../images/PacoGuay.jpg';
 import Riki from '../images/Riki.jpg';
+import PropTypes from 'prop-types';
 
 const photo = [
   Victoria,
@@ -60,5 +61,15 @@ function CardLower (props) {
     </div>
   );
 }
-
+CardLower.propTypes = {
+  first_name:PropTypes.string,
+  last_name:PropTypes.string,
+  email:PropTypes.string, 
+  phone:PropTypes.number, 
+  area:PropTypes.string,
+  id:PropTypes.number,
+  areaLink:PropTypes.string, 
+  position:PropTypes.string,
+  newChief:PropTypes.string
+}
 export default CardLower;

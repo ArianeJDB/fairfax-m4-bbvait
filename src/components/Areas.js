@@ -3,6 +3,7 @@ import CardUpper from './CardUpper';
 import CardLower from './CardLower';
 import Header from './Header';
 import bbva from '../images/bbva.jpg';
+import PropTypes from 'prop-types';
 
 function Areas(props) {
     const {executives, managers} = props;
@@ -36,6 +37,11 @@ function Areas(props) {
             </ul>
           </div>
     );
+}
+
+Areas.propTypes = {
+  executive:PropTypes.array,
+  managers:PropTypes.array,
 }
 
 export default Areas;

@@ -1,6 +1,7 @@
 .nav__container {
     position: fixed;
     display: flex;
+    justify-content: space-between;
     top: 60px;
     width: 100%;
     background-color: white;
@@ -9,7 +10,23 @@
     height: 40px;
     align-items: center;
     padding-left: 20px;
-    z-index: 2;
+    z-index: 2; 
+
+    @media all and (max-width: 500px) {
+        min-height: 40px;
+        height: auto;
+    }
+}
+
+.nav__bc {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    @media all and (max-width: 500px) {
+        flex-wrap: wrap;
+    }
 }
 
 .list__item--bc {
@@ -30,4 +47,24 @@
     color: lightgrey;
     padding: 0 10px;
     bottom: -30px;
+}
+
+.icon__search {
+    font-size: 20px; 
+    color: lightgrey;
+}
+
+.search__link--container {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.hover__search {
+    display: none;
+    color: black;
+}
+
+.search__link:hover .hover__search {
+    display: block;
 }

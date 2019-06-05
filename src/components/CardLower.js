@@ -26,8 +26,6 @@ const getPhoto = () => {
   return Math.ceil(Math.random() *8); 
   }
 
-
-
 function CardLower (props) {
   const {first_name, last_name, email, phone, area, id} = props.item;
   const {areaLink, position,newChief} = props;

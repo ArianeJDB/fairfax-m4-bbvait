@@ -26,7 +26,7 @@ function Areas(props) {
 
         return (
           <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
-            <Header />
+            <Header pathNav={`/areas/${idSelected}`} labelNav={newChief.area} />
             <div className="upper__block">
               <CardUpper item={newChief} />
             </div>

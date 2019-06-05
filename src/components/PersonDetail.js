@@ -13,7 +13,7 @@ function PersonDetail(props) {
   console.log(executiveInfo)
     return (
       <div className="detail__container">
-        <Header /> 
+        <Header pathNav={`/staff/${idSelected}`} labelNav={`${personalStaff.first_name} ${personalStaff.last_name}`} /> 
         <main className='main_wrapper'>
           <div className="block__info ">
             <div className="detail__img" style={{ backgroundImage: `url(${personalStaff.image})` }}></div>

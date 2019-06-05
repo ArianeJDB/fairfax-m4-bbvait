@@ -1,7 +1,7 @@
 import React from 'react';
-// import fotoCard from '../images/fotoCard.jpg';
-import ChartDetail from './ChartDetail';
+import ChartDetail from './ChartDetail'
 import Header from './Header';
+import PropTypes from 'prop-types';
 
 function PersonDetail (props) {
   const {
@@ -100,9 +100,19 @@ function PersonDetail (props) {
           handleSkillsBtn={handleSkillsBtn}
           handleManagmentBtn={handleManagmentBtn}
           infoManagement={infoManagement}
-        />
-      </main>
-    </div>
-  );
-}
+           />
+        </main>
+      </div>
+    )
+  }
+  PersonDetail.propTypes = {
+    staff:PropTypes.array,
+    selectedGraph:PropTypes.string, 
+    handleSkillsBtn:PropTypes.func,
+    infoManagement:PropTypes.bool, 
+    handleManagmentBtn:PropTypes.func, 
+    projects:PropTypes.array, 
+    managers:PropTypes.array, 
+    executives:PropTypes.array
+  }
 export default PersonDetail;

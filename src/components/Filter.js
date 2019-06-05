@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import '../stylesheets/_filterName.scss';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function Filter (props) {
   const {filterName, staff, handleFilterName} = props;
@@ -55,5 +56,9 @@ function Filter (props) {
     </React.Fragment>
   );
 }
-
+Filter.propTypes = {
+  filterName:PropTypes.string, 
+  staff:PropTypes.array, 
+  handleFilterName:PropTypes.func
+}
 export default Filter;

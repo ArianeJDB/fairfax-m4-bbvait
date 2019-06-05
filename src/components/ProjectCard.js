@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../stylesheets/_projectCard.scss';
+import PropTypes from 'prop-types';
 
 function ProjectCard (props) {
   const {name, id} = props.item;
@@ -15,5 +16,8 @@ function ProjectCard (props) {
     </div>
   );
 }
-
+ProjectCard.propTypes = {
+  name:PropTypes.string,
+  id:PropTypes.number
+}
 export default ProjectCard;

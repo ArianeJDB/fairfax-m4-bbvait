@@ -3,6 +3,7 @@ import CardUpper from './CardUpper';
 import ProjectCard from './ProjectCard';
 import Header from './Header';
 import bbva from '../images/bbva.jpg';
+import PropTypes from 'prop-types';
 
 function Managers (props) {
   const {managers, projects} = props;
@@ -32,5 +33,9 @@ function Managers (props) {
     </div>
   );
 }
+Managers.propTypes = {
+  Managers:PropTypes.array,
+  projects:PropTypes.number
+  }
 
 export default Managers;

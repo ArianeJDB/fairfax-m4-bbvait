@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 let breadcrumbsList = [{path: '/', label: 'Inicio'}];
 
@@ -40,6 +41,11 @@ function BreadCrumbs (props) {
       </div>
     </nav>
   );
+}
+
+BreadCrumbs.propTypes = {
+  pathNav:PropTypes.string,
+  labelNav:PropTypes.string
 }
 
 export default BreadCrumbs;

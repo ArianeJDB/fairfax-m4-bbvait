@@ -1,5 +1,6 @@
 import React from 'react';
 import BreadCrumbs from './BreadCrumbs';
+import PropTypes from 'prop-types';
 
 function Header (props) {
   const {pathNav, labelNav} = props;
@@ -7,13 +8,13 @@ function Header (props) {
     <React.Fragment>
       <div className="header">
         <span className="header__title">Organigrama</span>
-        <p className="logout">
-          <i className="fas fa-sign-out-alt" /> Cerrar Sesión
-        </p>
       </div>
       <BreadCrumbs pathNav={pathNav} labelNav={labelNav} />
     </React.Fragment>
   );
 }
-
+Header.propTypes = {
+  pathNav:PropTypes.string,
+  labelNav:PropTypes.string
+}
 export default Header;

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Radar} from 'react-chartjs-2';
+import { Radar } from 'react-chartjs-2';
+import PropTypes from 'prop-types';
 
 function ChartDetail (props) {
   const {chartData, selectedGraph, handleSkillsBtn} = props;
@@ -161,6 +162,11 @@ function ChartDetail (props) {
       </div>
 
     </div>
-  );
+  )
+}
+ChartDetail.propTypes = {
+  chartData:PropTypes.object,
+  selectedGraph:PropTypes.string,
+  handleSkillsBtn:PropTypes.func
 }
 export default ChartDetail;

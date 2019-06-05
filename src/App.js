@@ -55,6 +55,7 @@ class App extends React.Component {
       projects,
       staff,
       isLoading,
+      photo,
       selectedGraph,
       infoManagement,
       // handleSkillsBtn
@@ -69,7 +70,13 @@ class App extends React.Component {
           <Route
             exact
             path="/"
-            render={() => <Home chief={chief} executives={executives} />}
+            render={() => (
+              <Home
+                photo={photo}
+                chief={chief}
+                executives={executives}
+              />
+            )}
           />
           <Route
             path="/areas/:id"

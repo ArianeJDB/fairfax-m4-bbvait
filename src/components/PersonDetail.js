@@ -23,9 +23,9 @@ function PersonDetail(props) {
                   <h2 className="detail__name">{personalStaff.first_name}</h2>
                   <h2 className="detail__surname">{personalStaff.last_name}</h2>
                 </div>
-                <div>
+                <div className='contact__info'>
                   <h3 className="upper__email">{personalStaff.email}</h3>
-                  <p className='phone__contact'>Telefono: {personalStaff.phone} - Ext: {personalStaff.extension}</p>
+                  <p className='phone__contact'>Tel: {personalStaff.phone} - Ext: {personalStaff.extension}</p>
                 </div>
                 <div className="social_media">
                 <i className="fab fa-linkedin social_media_icon"></i>

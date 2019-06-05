@@ -86,7 +86,7 @@
     width: 100vw;
     flex-direction: row;
     justify-content: space-between;
-    padding:  40px 100px;
+    padding:  40px 170px;
     text-align: left;
   }
 }
@@ -119,6 +119,12 @@
   }
   
 }
+.contact__info{
+  padding: 10px 0;
+  @media (min-width: 768px) {
+  padding: 0;
+  }
+}
 
 .tag_detail {
   list-style: none;
@@ -142,7 +148,7 @@
 // }
 .project__info{
   width: 320px;
-  margin-top: 20px;
+  margin: 20px 0;
   @media (min-width: 768px) {
   width: auto;
   }

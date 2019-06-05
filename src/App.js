@@ -1,18 +1,21 @@
 import React from 'react';
-import {fetchPeople} from './data/Data';
-import {Route, Switch} from 'react-router-dom';
+import { fetchPeople } from './data/Data';
+import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Areas from './components/Areas';
-import PersonDetail from './components/PersonDetail';
+// import PersonDetail from './components/PersonDetail';
 import Managers from './components/Managers';
 import Projects from './components/Projects';
 import Loader from './components/Loader';
-import ProjectCard from './components/ProjectCard'
-// import './App.css';
+// import ProjectCard from './components/ProjectCard'
+import Login from './components/Login'
+// import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+// import firebase from 'firebase';
+
 
 class App extends React.Component {
-  constructor (props) {
-    super (props);
+  constructor(props) {
+    super(props);
     this.state = {
       chief: [],
       executives: [],
@@ -20,16 +23,20 @@ class App extends React.Component {
       projects: [],
       staff: [],
       isLoading: true,
+  
     };
+   
   }
 
-  componentDidMount () {
-    this.FetchAllData ();
+  componentDidMount() {
+    this.FetchAllData();
   }
 
-  FetchAllData () {
-    fetchPeople ().then (people => {
-      this.setState ({
+ 
+
+  FetchAllData() {
+    fetchPeople().then(people => {
+      this.setState({
         chief: [...people['chief executive']],
         executives: [...people.executives],
         managers: [...people.managers],
@@ -40,7 +47,7 @@ class App extends React.Component {
       );
     });
   }
-  render () {
+  render() {
     const {
       chief,
       executives,
@@ -48,14 +55,20 @@ class App extends React.Component {
       projects,
       staff,
       isLoading,
-    } = this.state;
-
+    } = this.state;  
     if (isLoading) {
-      return   <Loader />;
+      return <Loader />;
     }
     return (
       <div className="App">
         <Switch>
+          <Route
+            exact
+            path="/login/"
+            render={() => (
+              <Login  />
+            )}
+          />
           <Route
             exact
             path="/"
@@ -76,8 +89,8 @@ class App extends React.Component {
               />
             )}
           />
-          <Route 
-            path="/managers/:id" 
+          <Route
+            path="/managers/:id"
             render={props => (
               <Managers
                 match={props.match}
@@ -87,8 +100,8 @@ class App extends React.Component {
             )}
           />
 
-          <Route 
-            path="/projects/:id" 
+          <Route
+            path="/projects/:id"
             render={props => (
               <Projects
                 match={props.match}

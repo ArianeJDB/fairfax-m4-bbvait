@@ -2,6 +2,10 @@
   flex-wrap: wrap;
   margin: 30px 20px 10px 20px;
   font-size: 26px;
+  @media all and (max-width: 320px) {
+    font-size: 18px;
+    padding-top: 5px;
+}
 }
 
 .project__container {
@@ -18,15 +22,22 @@
       filter: drop-shadow(5px 5px 10px rgb(156, 154, 154));
       transition: 0.5s;
   }
+  @media all and (max-width: 320px) {
+    width: 310px;
+}
 }
 
 .project__link{
   display: flex;
   justify-content: flex-end;
+  
 }
 
 .link{
   margin-right: 15px;
+  @media all and (max-width: 320px) {
+    font-size: 14px;
+}
 }
 
 

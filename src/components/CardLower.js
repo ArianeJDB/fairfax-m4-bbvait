@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import fotoCard from '../images/fotoCard.jpg';
 
 function CardLower (props) {
-  const {first_name, last_name, email, phone, area, id} = props.item;
+  const {first_name, last_name, email, phone, id} = props.item;
   const {areaLink, position} = props;
   return (
     <div className="card__container">

@@ -28,7 +28,6 @@ function BreadCrumbs (props) {
         {newBC}
       </ul>
       <div className="search__link--container">
-        <p className="hover__search">Buscar</p>
         <Link className="search__link" to="/search/">
           <i className="fas fa-search icon__search" />
         </Link>

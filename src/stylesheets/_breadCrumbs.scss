@@ -9,7 +9,13 @@
     height: 40px;
     align-items: center;
     padding-left: 20px;
-    z-index: 2;
+    z-index: 2; 
+
+    @media all and (max-width: 500px) {
+        flex-wrap: wrap;
+        min-height: 40px;
+        height: auto;
+    }
 }
 
 .list__item--bc {

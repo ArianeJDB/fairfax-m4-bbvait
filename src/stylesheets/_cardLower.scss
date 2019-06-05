@@ -13,6 +13,11 @@
       filter: drop-shadow(5px 5px 10px rgb(156, 154, 154));
       transition: 0.5s;
   }
+
+  @media all and (max-width: 320px) {
+    width: 300px;
+    height: 190px;
+  }
 }
 
 .block1{
@@ -26,6 +31,11 @@
   background-position: center;
   border-radius: 50%;
   margin: 15px;
+
+  @media all and (max-width: 320px) {
+    width: 80px;
+    height: 80px;
+  }
 
 }
 
@@ -45,17 +55,32 @@
 
 .lower__name{
   font-size: 26px; 
+
+  @media all and (min-width: 320px) {
+    font-size: 18px;
+    margin-right: 16px;
+    color: gray;
+  }
 }
 
 .card__position{
   font-size: 20px;
   color: gray;
+
+  @media all and (max-width: 320px) {
+    font-size: 18px;
+    margin-right: 16px;
+  }
 }
 
 .block3{
   text-align: left;
   margin: 15px;
   color: grey;
+
+  @media all and (max-width: 320px) {
+    margin: 0 15px;
+  }
 }
 
 .card__contact {
@@ -67,6 +92,10 @@
 .card__email{
   font-size: 14px;
   color: grey;
+
+  @media all and (max-width: 320px) {
+    margin: 0 10px;
+  }
 }
 
 .card__phone{
@@ -77,6 +106,10 @@
 .card__area{
   font-size: 16px;
   margin: 0%;
+
+  @media all and (max-width: 320px) {
+    margin: 0 10px;
+  }
   
 }
 

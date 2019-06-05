@@ -24,8 +24,13 @@ Proyecto realizado por Adalab en colaboración con el BBVA IT, quien nos ha pedi
 * [Angélica Cavero](https://github.com/Nagema)
 * [Patricia García Fernández](https://github.com/patijoe)
 
-## Agradecimientos especiales
+## Agradecimientos
 ¡Muchas gracias BBVA IT por darnos la oportunidad de demostrar nuestro potencial como desarrolladoras frontend y a Adalab por formarnos!
+
+Y en especial nos gustaría agradecer al equipo técnico:
+
+Jesús Lopez, Eduardo Tarancón, Nathan Burkiewicz del BBVA IT por la hospitalidad, buen trato y profesionalidad que nos han dedicado.
+
 
 ## Código Abierto
 Si te interesa nuestro proyecto, estamos encantadas de recibir cualquier sugerencia por los issues o si quieren desarrollarlo más ¡adelante!

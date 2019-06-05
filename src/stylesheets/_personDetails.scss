@@ -24,6 +24,10 @@
   background-position: center;
   margin: 25px;
 }
+.detail__name  {
+  padding-top: 30px;
+
+}
 .card_main_wrapper {
   margin: 0 10px 30px;
   @media (min-width: 768px) {
@@ -97,4 +101,29 @@
 
 .hidden{
   display: none;
+}
+
+.cloud_tags_detail {
+  display: flex;
+  color: black;
+  padding-left: 0;
+  
+}
+
+.tag_detail {
+  list-style: none;
+  background-color: #49A5E6;
+  border-radius: 8px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #fff;
+    
+}
+
+.social_media_icon {
+  font-size: 35px;
+  margin: 0 15px 0 0;
+  color:grey;
+  
 }

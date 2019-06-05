@@ -18,7 +18,7 @@ function PersonDetail(props) {
           <div className="block__info ">
             <div className="detail__img" style={{ backgroundImage: `url(${personalStaff.image})` }}></div>
             <div className='info_wrapper'>
-              <div>
+              <div className="block_info_container">
                 <div className="block__info_names">
                   <h2 className="detail__name">{personalStaff.first_name}</h2>
                   <h2 className="detail__surname">{personalStaff.last_name}</h2>
@@ -26,6 +26,12 @@ function PersonDetail(props) {
                 <div>
                   <h3 className="upper__email">{personalStaff.email}</h3>
                   <p>Telefono: {personalStaff.phone} - Ext: {personalStaff.extension}</p>
+                </div>
+                <div className="social_media">
+                <i className="fab fa-linkedin social_media_icon"></i>
+                <i class="fab fa-github-square social_media_icon"></i>
+                <i class="fab fa-twitter-square social_media_icon"></i>
+
                 </div>
               </div>
               <div className='info_detail_group'>
@@ -45,11 +51,14 @@ function PersonDetail(props) {
               <p>Actividad/Proyectos</p>
               <p>{projectInfo.name}</p>
               <p>{personalStaff.role}</p>
-              <ul>Tecnologias:
-                <li>{projectInfo.technology_1}</li>
-                <li>{projectInfo.technology_2}</li>
-
+              <div className="cloud_tags_container">
+                <p>Tecnologías: </p>
+                <ul className="cloud_tags_detail">
+                <li className="tag_detail">{projectInfo.technology_1}</li>
+                <li className="tag_detail">{projectInfo.technology_2}</li>
               </ul>
+              </div>
+             
             </div>
           </div>
           <ChartDetail chartData={personalStaff.skills}

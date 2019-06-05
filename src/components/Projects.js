@@ -8,7 +8,6 @@ function Projects (props) {
 
     const { projects, staff } = props;
     const idSelected = parseInt(props.match.params.id);
-
     const newProject = projects.find(project => project.id === idSelected);
     const newElements = staff
         .filter(person => person.cod_project === idSelected)

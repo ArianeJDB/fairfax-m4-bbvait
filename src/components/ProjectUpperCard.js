@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import fotoCard from '../images/fotoCard.jpg';
-import { isTemplateElement } from '@babel/types';
 import '../stylesheets/_projectUpperCard.scss'
 
 function ProjectUpperCard (props) {
@@ -11,7 +8,7 @@ function ProjectUpperCard (props) {
       <div className="project_upper__container">
         <div className="upper-block1">
           <div className="icon_container">
-          <i class="far fa-folder-open icon_folder"></i>
+          <i className="far fa-folder-open icon_folder"></i>
           </div>
           <h3 className="project_title">{name}</h3>
                     

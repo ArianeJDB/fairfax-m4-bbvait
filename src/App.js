@@ -7,6 +7,7 @@ import PersonDetail from './components/PersonDetail';
 import Managers from './components/Managers';
 import Projects from './components/Projects';
 import Loader from './components/Loader';
+import Filter from './components/Filter';
 
 class App extends React.Component {
   constructor (props) {
@@ -20,8 +21,10 @@ class App extends React.Component {
       isLoading: true,
       selectedGraph: 'frontend',
       infoManagement: false,
+      filterName: '',
     };
     this.handleSkillsBtn = this.handleSkillsBtn.bind (this);
+    this.handleFilterName = this.handleFilterName.bind(this);
   }
 
   componentDidMount () {
@@ -47,6 +50,13 @@ class App extends React.Component {
     }));
   }
 
+  handleFilterName(e) {
+    const value = e.currentTarget.value;
+    this.setState({
+      filterName: value
+    })
+  }
+
   render () {
     const {
       chief,
@@ -58,7 +68,7 @@ class App extends React.Component {
       photo,
       selectedGraph,
       infoManagement,
-      // handleSkillsBtn
+      filterName,
     } = this.state;
 
     if (isLoading) {
@@ -75,6 +85,8 @@ class App extends React.Component {
                 photo={photo}
                 chief={chief}
                 executives={executives}
+                staff={staff}
+                handleFilterName={this.handleFilterName}
               />
             )}
           />
@@ -115,6 +127,17 @@ class App extends React.Component {
             )}
           />
 
+          <Route
+            path="/search/"
+            render={props => (
+              <Filter
+                match={props.match}
+                staff={staff}
+                handleFilterName={this.handleFilterName}
+                filterName={filterName}
+              />
+            )}
+          />
           <Route
             path="/projects/:id"
             render={props => (

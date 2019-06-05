@@ -24,7 +24,7 @@ class App extends React.Component {
       filterName: '',
     };
     this.handleSkillsBtn = this.handleSkillsBtn.bind (this);
-    this.handleFilterName = this.handleFilterName.bind(this);
+    this.handleFilterName = this.handleFilterName.bind (this);
   }
 
   componentDidMount () {
@@ -50,11 +50,11 @@ class App extends React.Component {
     }));
   }
 
-  handleFilterName(e) {
+  handleFilterName (e) {
     const value = e.currentTarget.value;
-    this.setState({
-      filterName: value
-    })
+    this.setState ({
+      filterName: value,
+    });
   }
 
   render () {

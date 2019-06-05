@@ -1,8 +1,8 @@
 import React from 'react';
-import { Radar } from 'react-chartjs-2';
+import {Radar} from 'react-chartjs-2';
 
-function ChartDetail(props) {
-  const { chartData, selectedGraph, handleSkillsBtn } = props;
+function ChartDetail (props) {
+  const {chartData, selectedGraph, handleSkillsBtn} = props;
   const dataCss = {
     labels: [],
     datasets: [
@@ -15,8 +15,9 @@ function ChartDetail(props) {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(255,99,132,1)',
         data: [],
-      }]
-  }
+      },
+    ],
+  };
   const dataFrameworks = {
     labels: [],
     datasets: [
@@ -29,8 +30,9 @@ function ChartDetail(props) {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(255,99,132,1)',
         data: [],
-      }]
-  }
+      },
+    ],
+  };
   const dataHtml = {
     labels: [],
     datasets: [
@@ -43,8 +45,9 @@ function ChartDetail(props) {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(255,99,132,1)',
         data: [],
-      }]
-  }
+      },
+    ],
+  };
   const dataJs = {
     labels: [],
     datasets: [
@@ -57,10 +60,9 @@ function ChartDetail(props) {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(255,99,132,1)',
         data: [],
-      }
-
-    ]
-  }
+      },
+    ],
+  };
 
   const dataAgile = {
     labels: [],
@@ -74,21 +76,21 @@ function ChartDetail(props) {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgba(255,99,132,1)',
         data: [],
-      }
-
-    ]
-  }
-  dataCss.labels = Object.keys(chartData.frontend.css)
-  dataCss.datasets[0].data = Object.values(chartData.frontend.css)
-  dataFrameworks.labels = Object.keys(chartData.frontend.frameworks)
-  dataFrameworks.datasets[0].data = Object.values(chartData.frontend.frameworks)
-  dataHtml.labels = Object.keys(chartData.frontend.html)
-  dataHtml.datasets[0].data = Object.values(chartData.frontend.html)
-  dataJs.labels = Object.keys(chartData.frontend.js)
-  dataJs.datasets[0].data = Object.values(chartData.frontend.js)
-  dataAgile.labels = Object.keys(chartData.managenemnt.agile)
-  dataAgile.datasets[0].data = Object.values(chartData.managenemnt.agile)
-
+      },
+    ],
+  };
+  dataCss.labels = Object.keys (chartData.frontend.css);
+  dataCss.datasets[0].data = Object.values (chartData.frontend.css);
+  dataFrameworks.labels = Object.keys (chartData.frontend.frameworks);
+  dataFrameworks.datasets[0].data = Object.values (
+    chartData.frontend.frameworks
+  );
+  dataHtml.labels = Object.keys (chartData.frontend.html);
+  dataHtml.datasets[0].data = Object.values (chartData.frontend.html);
+  dataJs.labels = Object.keys (chartData.frontend.js);
+  dataJs.datasets[0].data = Object.values (chartData.frontend.js);
+  dataAgile.labels = Object.keys (chartData.managenemnt.agile);
+  dataAgile.datasets[0].data = Object.values (chartData.managenemnt.agile);
 
   return (
     <div className="card text-center card_main_wrapper">
@@ -100,62 +102,65 @@ function ChartDetail(props) {
         </div>
       </div>
       <div className="card-body">
-        <div className='chart-wrapper'>
+        <div className="chart-wrapper">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <button className={`nav-link btn_skills ${selectedGraph === 'frontend' ? 'active' : ''}`} onClick={() => handleSkillsBtn('frontend')} >Front end</button>
+              <button
+                className={`nav-link btn_skills ${selectedGraph === 'frontend' ? 'active' : ''}`}
+                onClick={() => handleSkillsBtn ('frontend')}
+              >
+                Front end
+              </button>
             </li>
             <li className="nav-item">
-              <button className={`nav-link btn_skills ${selectedGraph === 'managenemnt' ? 'active' : ''}`} onClick={() => handleSkillsBtn('managenemnt')}   >Management</button>
+              <button
+                className={`nav-link btn_skills ${selectedGraph === 'managenemnt' ? 'active' : ''}`}
+                onClick={() => handleSkillsBtn ('managenemnt')}
+              >
+                Management
+              </button>
             </li>
           </ul>
         </div>
       </div>
       <div className={`charts ${selectedGraph !== 'frontend' ? 'hidden' : ''}`}>
-        <div className='chart_container ' >
-          <div className='card_wrapper' >
+        <div className="chart_container ">
+          <div className="card_wrapper">
             <small>HTML</small>
-            <Radar data={dataHtml}
-            />
+            <Radar data={dataHtml} />
           </div>
         </div>
-        <div className='chart_container ' >
-            <div className='card_wrapper' >
-              <small>CSS</small>
-              <Radar data={dataCss}
-              />
-            </div>
+        <div className="chart_container ">
+          <div className="card_wrapper">
+            <small>CSS</small>
+            <Radar data={dataCss} />
           </div>
-          <div className='chart_container ' >
-            <div className='card_wrapper' >
-              <small>JAVASCRIPT</small>
-              <Radar data={dataJs}
-              />
-            </div>
+        </div>
+        <div className="chart_container ">
+          <div className="card_wrapper">
+            <small>JAVASCRIPT</small>
+            <Radar data={dataJs} />
           </div>
-          <div className='chart_container'>
-            <div className='card_wrapper' >
-              <small>FRAMEWORKS</small>
-              <Radar data={dataFrameworks}
-              />
-            </div>
-          </div>          
+        </div>
+        <div className="chart_container">
+          <div className="card_wrapper">
+            <small>FRAMEWORKS</small>
+            <Radar data={dataFrameworks} />
+          </div>
+        </div>
       </div>
-      <div className={`chart_management ${selectedGraph === 'frontend' ? 'hidden' : ''}`}>
-        <div className='chart_container ' >
-          <div className='card_wrapper' >
-            <small></small>
-            <Radar data={dataAgile}
-            />
+      <div
+        className={`chart_management ${selectedGraph === 'frontend' ? 'hidden' : ''}`}
+      >
+        <div className="chart_container ">
+          <div className="card_wrapper">
+            <small />
+            <Radar data={dataAgile} />
           </div>
         </div>
-    </div>
+      </div>
 
     </div>
-
-    
-
-
-  )
+  );
 }
 export default ChartDetail;

@@ -76,16 +76,22 @@
 }
 
 .detail_subsection {
+  width: 320px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
+  margin: auto;
   @media (min-width: 768px) {
+    width: 100vw;
     flex-direction: row;
     justify-content: space-between;
-    margin: 30px 100px;
-    padding: 0 40px;
+    padding:  40px 100px;
     text-align: left;
   }
+}
+.info__detail_area{
+  margin-top: 20px;
 }
 .btn_skills {
   border: none;
@@ -105,8 +111,12 @@
 
 .cloud_tags_detail {
   display: flex;
+  justify-content: center;
   color: black;
   padding-left: 0;
+  @media (min-width: 768px) {
+    justify-content: left;
+  }
   
 }
 
@@ -126,4 +136,17 @@
   margin: 0 15px 0 0;
   color:grey;
   
+}
+// .phone__contact{
+//   font-size: 12px;
+// }
+.project__info{
+  width: 320px;
+  margin-top: 20px;
+  @media (min-width: 768px) {
+  width: auto;
+  }
+}
+.info__detail_group{
+margin-top: 20px;
 }

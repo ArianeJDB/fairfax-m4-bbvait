@@ -22,12 +22,12 @@ function ChartDetail(props) {
     datasets: [
       {
         label: '',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgb(253, 187, 50, 0.2)',
+        borderColor: 'rgb(253, 187, 50, 1)',
+        pointBackgroundColor: 'rgb(253, 187, 50, 1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
+        pointHoverBorderColor: 'rgb(253, 187, 50, 1)',
         data: [],
       }]
   }
@@ -36,12 +36,12 @@ function ChartDetail(props) {
     datasets: [
       {
         label: '',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgb(252, 140, 37, 0.2)',
+        borderColor: 'rgb(252, 140, 37, 0.9)',
+        pointBackgroundColor: 'rgb(252, 140, 37, 1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
+        pointHoverBorderColor: 'rgb(252, 140, 37, 1)',
         data: [],
       }]
   }
@@ -50,12 +50,12 @@ function ChartDetail(props) {
     datasets: [
       {
         label: '',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgb(35, 122, 186, 0.2)',
+        borderColor: 'rgb(35, 122, 186, 1)',
+        pointBackgroundColor: 'rgb(35, 122, 186, 1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
+        pointHoverBorderColor: 'rgb(35, 122, 186, 1)',
         data: [],
       }
 
@@ -67,12 +67,12 @@ function ChartDetail(props) {
     datasets: [
       {
         label: '',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgb(45, 204, 205, 0.2)',
+        borderColor: 'rgb(45, 204, 205, 1)',
+        pointBackgroundColor: 'rgb(45, 204, 205, 1)',
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgba(255,99,132,1)',
+        pointHoverBorderColor: 'rgb(45, 204, 205, 1)',
         data: [],
       }
 

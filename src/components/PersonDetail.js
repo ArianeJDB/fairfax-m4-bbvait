@@ -25,7 +25,7 @@ function PersonDetail(props) {
                 </div>
                 <div>
                   <h3 className="upper__email">{personalStaff.email}</h3>
-                  <p>Telefono: {personalStaff.phone} - Ext: {personalStaff.extension}</p>
+                  <p className='phone__contact'>Telefono: {personalStaff.phone} - Ext: {personalStaff.extension}</p>
                 </div>
                 <div className="social_media">
                 <i className="fab fa-linkedin social_media_icon"></i>
@@ -34,7 +34,7 @@ function PersonDetail(props) {
 
                 </div>
               </div>
-              <div className='info_detail_group'>
+              <div className='info__detail_group'>
                 <p>COD-GRUPO: {personalStaff.cod_grupo}</p>
                 <p>COD-INT: {personalStaff.cod_int}</p>
                 <p>Level: {personalStaff.level} -  Sublevel: {personalStaff.sublevel}</p>
@@ -42,12 +42,12 @@ function PersonDetail(props) {
             </div>
           </div>
           <div className='detail_subsection'>
-            <div>
+            <div className='info__detail_area'>
               <p>Area: {executiveInfo.area}</p>
               <p>Manager: {executiveInfo.first_name} {executiveInfo.last_name}</p>
               <p>Mentor: {personalStaff.mentor}</p>
             </div>
-            <div>
+            <div className='project__info'>
               <p>Actividad/Proyectos</p>
               <p>{projectInfo.name}</p>
               <p>{personalStaff.role}</p>

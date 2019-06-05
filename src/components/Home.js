@@ -8,7 +8,7 @@ class Home extends React.Component {
   render () {
     return (
       <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
-        <Header />
+        <Header pathNav="/" labelNav="Inicio"/>
         <div className="upper__block">
           {this.props.chief.map (item => {
             return (
@@ -24,7 +24,10 @@ class Home extends React.Component {
           {this.props.executives.map (item => {
             return (
               <li>
-                <CardLower item={item} areaLink="areas" position="Director de área"/>
+                <CardLower 
+                  item={item} 
+                  areaLink="areas" 
+                  position="Director de área"/>
               </li>
             );
           })}

@@ -6,7 +6,7 @@ import Header from './Header';
 function PersonDetail(props) {
   const {staff, selectedGraph, handleSkillsBtn, infoManagement, handleManagmentBtn, projects, managers, executives} = props;
   const idSelected = props.match.params.id;
-  const personalStaff = staff.find (item => item.cod_int === idSelected);
+  const personalStaff = staff.find (item => item.id === parseInt(idSelected));
   const projectInfo = projects.find (item => item.id === personalStaff.cod_project);
   const areaInfo = managers.find(item => item.id === projectInfo.id_subarea)
   const executiveInfo = executives.find(item => item.id === areaInfo.area)

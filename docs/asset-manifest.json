@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.99b4ce60.chunk.css",
+    "main.js": "/static/js/main.8d79b58d.chunk.js",
+    "main.js.map": "/static/js/main.8d79b58d.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.b8e69a54.chunk.js": "/static/js/2.b8e69a54.chunk.js",
+    "static/js/2.b8e69a54.chunk.js.map": "/static/js/2.b8e69a54.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.062487e49afd6a8202bef56a284c2971.js": "/precache-manifest.062487e49afd6a8202bef56a284c2971.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.99b4ce60.chunk.css.map": "/static/css/main.99b4ce60.chunk.css.map",
+    "static/media/App.scss": "/static/media/BentonSansBBVA-MediumItalic.803e1fe8.woff",
+    "static/media/Maria.jpg": "/static/media/Maria.5b175603.jpg",
+    "static/media/Victoria.jpg": "/static/media/Victoria.6080eb26.jpg",
+    "static/media/bbva.jpg": "/static/media/bbva.684b146a.jpg",
+    "static/media/fotoCard.jpg": "/static/media/fotoCard.a6acd61c.jpg"
+  }
+}

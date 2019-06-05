@@ -2,35 +2,35 @@ import React from 'react';
 import CardLower from './CardLower';
 import CardUpper from './CardUpper';
 import bbva from '../images/bbva.jpg';
+import Header from './Header';
 
 class Home extends React.Component {
   render () {
     return (
       <div className="box__container" style={{backgroundImage: `url(${bbva})`}}>
-        <div className="header">
-          <h1 className="header__title">BBVA-IT - ORGANIGRAM</h1>
-          <p className="logout"><i class="fas fa-sign-out-alt">  Logout</i></p>
-        </div>
+        <Header pathNav="/" labelNav="Inicio"/>
         <div className="upper__block">
-          <CardUpper className="card__level1"/>
+          {this.props.chief.map (item => {
+            return (
+              <div className="card__level1">
+                <CardUpper item={item} />
+              </div>
+            );
+          })}
+
         </div>
-        {/* <hr className="horizontal-line"/> */}
+        <hr className="horizontal-line" />
         <ul className="lower__block">
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
-          <li>
-            <CardLower />
-          </li>
+          {this.props.executives.map (item => {
+            return (
+              <li>
+                <CardLower
+                  item={item} 
+                  areaLink="areas" 
+                  position="Director de área"/>
+              </li>
+            );
+          })}
         </ul>
       </div>
     );

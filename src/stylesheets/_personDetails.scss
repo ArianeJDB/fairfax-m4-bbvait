@@ -7,6 +7,7 @@
   text-align: center;
   width: 80%;
   justify-content: space-between;
+  align-items: center;
   padding-top: 20px;
   @media (min-width: 768px) {
     width: 60%;
@@ -23,6 +24,10 @@
   background-position: center;
   margin: 25px;
 }
+.detail__name  {
+  padding-top: 30px;
+
+}
 .card_main_wrapper {
   margin: 0 10px 30px;
   @media (min-width: 768px) {
@@ -31,8 +36,6 @@
 }
 .card_wrapper {
   position: relative;
-  // width: 20vw;
-  // height:20vh; 
   margin: 20px 10px 30px;
   display: flex;
   justify-content: center;
@@ -62,6 +65,7 @@
   }
 }
 .block__info {
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,20 +74,24 @@
     justify-content: center;
   }
 }
-.detail__surname {
-  margin-left: 10px;
-}
+
 .detail_subsection {
+  width: 320px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
+  margin: auto;
   @media (min-width: 768px) {
+    width: 100vw;
     flex-direction: row;
     justify-content: space-between;
-    margin: 30px 100px;
-    padding: 0 40px;
+    padding:  40px 170px;
     text-align: left;
   }
+}
+.info__detail_area{
+  margin-top: 20px;
 }
 .btn_skills {
   border: none;
@@ -95,4 +103,56 @@
   &.active {
     background-color: #49a5e6 !important;
   }
+}
+
+.hidden{
+  display: none;
+}
+
+.cloud_tags_detail {
+  display: flex;
+  justify-content: center;
+  color: black;
+  padding-left: 0;
+  @media (min-width: 768px) {
+    justify-content: left;
+  }
+  
+}
+.contact__info{
+  padding: 10px 0;
+  @media (min-width: 768px) {
+  padding: 0;
+  }
+}
+
+.tag_detail {
+  list-style: none;
+  background-color: #49A5E6;
+  border-radius: 8px;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #fff;
+    
+}
+
+.social_media_icon {
+  font-size: 35px;
+  margin: 0 15px 0 0;
+  color:grey;
+  
+}
+// .phone__contact{
+//   font-size: 12px;
+// }
+.project__info{
+  width: 320px;
+  margin: 20px 0;
+  @media (min-width: 768px) {
+  width: auto;
+  }
+}
+.info__detail_group{
+margin-top: 20px;
 }

@@ -1,7 +1,7 @@
 .box__container{
   background-size: cover;
   background-position: center;
-  
+  padding-bottom: 50px;
 }
 
 .lower__block {
@@ -15,7 +15,7 @@
 }
 
 .upper__block {
-  padding: 40px 0;
+  padding: 120px 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,12 +23,15 @@
 
 .horizontal-line {
   width: 80%;
-  color: gainsboro;
+  border-top: 2px solid #FFFFFF;
   padding-top: 24px;
   margin-top: 0;
+  opacity: 0.8;
 }
 
 .header{
+  position: fixed;
+  width: 100%;
   background-color: #004481;
   color:white;
   padding: 20px;
@@ -36,10 +39,11 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  z-index: 1;
 }
 
 .header__title {
-  font-size: 18px;
+  font-size: 28px;
   margin: 0;
 }
 
@@ -48,5 +52,6 @@
   margin: 0 30px;;
   &:hover{
     transform: translate(5px, 0px);
+    transition: 0.5s;
   }
 }

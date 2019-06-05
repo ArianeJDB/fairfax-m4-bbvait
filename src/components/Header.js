@@ -3,7 +3,7 @@ import BreadCrumbs from './BreadCrumbs';
 import PropTypes from 'prop-types';
 
 function Header (props) {
-  const { pathNav, labelNav } = props;
+  const {pathNav, labelNav} = props;
   return (
     <React.Fragment>
       <div className="header">

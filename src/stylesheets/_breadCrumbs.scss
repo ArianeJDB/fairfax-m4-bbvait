@@ -13,7 +13,6 @@
     z-index: 2; 
 
     @media all and (max-width: 500px) {
-        flex-wrap: wrap;
         min-height: 40px;
         height: auto;
     }
@@ -24,6 +23,10 @@
     align-items: center;
     padding: 0;
     margin: 0;
+
+    @media all and (max-width: 500px) {
+        flex-wrap: wrap;
+    }
 }
 
 .list__item--bc {

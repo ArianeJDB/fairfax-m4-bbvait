@@ -1,6 +1,7 @@
 .project_name {
   flex-wrap: wrap;
   margin: 30px 20px 10px 20px;
+  font-size: 26px;
 }
 
 .project__container {
@@ -10,7 +11,7 @@
   border-radius: 5px;
   margin: 20px;
   height: 110px;
-  width: 400px;
+  width: 410px;
   background-color: #fff;
     &:hover {
       box-shadow: (-2px 3px 10px 0 rgba(0, 0, 0, 0.1));

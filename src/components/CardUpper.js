@@ -13,7 +13,7 @@ class CardUpper extends React.Component {
             <div className="upper-block2__name">
               <h2 className="upper__name">{`${this.props.item.first_name} ${this.props.item.last_name}`}</h2>
             </div>
-            <h2 className="upper__position">{this.props.item.area}</h2>
+            <h2 className="upper__position">{Number.isInteger(this.props.item.area)?'' : `${this.props.item.area}`  }</h2>
           </div>
         </div>
         <div className="upper-block3">

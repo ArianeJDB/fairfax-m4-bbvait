@@ -32,13 +32,13 @@
   justify-content: center;
   align-items: flex-end;
   margin-right: 38px;
- 
+  align-content: stretch;
 }
 .upper-block2__name{
   display: flex;
+  text-align: end;
 }
 .upper__name {
-  margin-right: 10px;
   font-size: 32px;
   text-align: right;
 }

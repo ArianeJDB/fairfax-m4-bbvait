@@ -7,9 +7,6 @@ import PersonDetail from './components/PersonDetail';
 import Managers from './components/Managers';
 import Projects from './components/Projects';
 import Loader from './components/Loader';
-import ProjectCard from './components/ProjectCard'
-
-// import './App.css';
 
 class App extends React.Component {
   constructor (props) {
@@ -21,8 +18,10 @@ class App extends React.Component {
       projects: [],
       staff: [],
       isLoading: true,
-      
+      selectedGraph: 'frontend',
+      infoManagement: false,
     };
+    this.handleSkillsBtn = this.handleSkillsBtn.bind (this);
   }
 
   componentDidMount () {
@@ -38,9 +37,14 @@ class App extends React.Component {
         projects: [...people.projects],
         staff: [...people.staff],
         isLoading: false,
-      },
-      );
+      });
     });
+  }
+
+  handleSkillsBtn (graph) {
+    this.setState (state => ({
+      selectedGraph: graph,
+    }));
   }
 
   render () {
@@ -52,10 +56,13 @@ class App extends React.Component {
       staff,
       isLoading,
       photo,
+      selectedGraph,
+      infoManagement,
+      // handleSkillsBtn
     } = this.state;
 
     if (isLoading) {
-      return   <Loader />;
+      return <Loader />;
     }
     return (
       <div className="App">
@@ -81,8 +88,24 @@ class App extends React.Component {
               />
             )}
           />
-          <Route 
-            path="/managers/:id" 
+          <Route
+            path="/staff/:id"
+            render={props => (
+              <PersonDetail
+                staff={staff}
+                match={props.match}
+                selectedGraph={selectedGraph}
+                infoManagement={infoManagement}
+                handleSkillsBtn={this.handleSkillsBtn}
+                handleManagmentBtn={this.handleManagmentBtn}
+                projects={projects}
+                managers={managers}
+                executives={executives}
+              />
+            )}
+          />
+          <Route
+            path="/managers/:id"
             render={props => (
               <Managers
                 match={props.match}
@@ -92,14 +115,10 @@ class App extends React.Component {
             )}
           />
 
-          <Route 
-            path="/projects/:id" 
+          <Route
+            path="/projects/:id"
             render={props => (
-              <Projects
-                match={props.match}
-                projects={projects}
-                staff={staff}
-              />
+              <Projects match={props.match} projects={projects} staff={staff} />
             )}
           />
         </Switch>

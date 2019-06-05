@@ -21,7 +21,6 @@ function PersonDetail (props) {
   );
   const areaInfo = managers.find (item => item.id === projectInfo.id_subarea);
   const executiveInfo = executives.find (item => item.id === areaInfo.area);
-  console.log (executiveInfo);
   return (
     <div className="detail__container">
       <Header
@@ -54,8 +53,8 @@ function PersonDetail (props) {
               </div>
               <div className="social_media">
                 <i className="fab fa-linkedin social_media_icon" />
-                <i class="fab fa-github-square social_media_icon" />
-                <i class="fab fa-twitter-square social_media_icon" />
+                <i className="fab fa-github-square social_media_icon" />
+                <i className="fab fa-twitter-square social_media_icon" />
 
               </div>
             </div>

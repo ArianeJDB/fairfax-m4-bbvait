@@ -154,7 +154,7 @@ function ChartDetail (props) {
       >
         <div className="chart_container ">
           <div className="card_wrapper">
-            <small />
+            <small>AGILE</small>
             <Radar data={dataAgile} />
           </div>
         </div>

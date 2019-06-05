@@ -3,7 +3,6 @@
   "name": "fairfax-m4-bbvait",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://bbvait-orgama.firebaseapp.com",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",

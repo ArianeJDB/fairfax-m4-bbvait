@@ -6,11 +6,10 @@ import {Link} from 'react-router-dom';
 function Filter (props) {
   const {filterName, staff, handleFilterName} = props;
   const newList = staff
-    .filter (
-      item =>
-        item.first_name.toLowerCase ().includes (filterName.toLowerCase ()) ||
-        item.last_name.toLowerCase ().includes (filterName.toLowerCase ())
-    )
+    .filter (item => {
+      const newItem = `${item.first_name.toLowerCase ()} ${item.last_name.toLowerCase ()}`;
+      return newItem.includes (filterName.toLowerCase ());
+    })
     .map ((item, index) => (
       <li key={`res-${index}`} className="search__item">
         {`${item.first_name} ${item.last_name}`}

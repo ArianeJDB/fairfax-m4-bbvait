@@ -31,10 +31,11 @@
 
 .block2{
   display: flex;
+  width: 178px;
   flex-direction: column;
   justify-content: center;
+  align-content: stretch;
   align-items: flex-end;
-  margin-right: 38px;
 }
 
 .block2__name{
@@ -76,13 +77,13 @@
 .card__area{
   font-size: 16px;
   margin: 0%;
+  
 }
 
 .card__details {
   display: flex;
   justify-content: space-between;
   margin: 0%;
-
 }
 
 .card__link{

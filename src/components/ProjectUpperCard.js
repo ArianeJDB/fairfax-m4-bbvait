@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import fotoCard from '../images/fotoCard.jpg';
-import { isTemplateElement } from '@babel/types';
 import '../stylesheets/_projectUpperCard.scss'
 
 function ProjectUpperCard (props) {
